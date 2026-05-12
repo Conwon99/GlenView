@@ -3,11 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME, META_AREA_PHRASE, PHONE_DISPLAY } from '../constants/site';
 ---
 
 <Layout 
-  title="Contact Us - Jimbos Cleaning | Get a Free Quote"
-  description="Contact Jimbos Cleaning for a free quote on exterior cleaning. Call 07919 270128 or fill out our form. Roof, render, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow."
+  title={`Contact Us - ${BUSINESS_NAME} | Get a Free Quote`}
+  description={`Contact ${BUSINESS_NAME} for a free quote on exterior cleaning. Call ${PHONE_DISPLAY} or fill out our form. Roof, render, driveway, gutter, PVC and window cleaning across ${META_AREA_PHRASE}.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />

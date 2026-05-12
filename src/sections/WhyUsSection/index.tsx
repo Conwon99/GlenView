@@ -1,5 +1,6 @@
 import { MobileCarousel } from "@/sections/WhyUsSection/components/MobileCarousel";
 import { DesktopGrid } from "@/sections/WhyUsSection/components/DesktopGrid";
+import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
 
 export const WhyUsSection = () => {
   return (
@@ -18,14 +19,14 @@ export const WhyUsSection = () => {
                   <h2 className="text-3xl font-medium box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px]">
                     Why Choose{" "}
                     <span className="text-3xl box-border caret-transparent leading-[35px] font-figtree md:text-[52px] md:leading-[62px]">
-                      Jimbos Cleaning
+                      {BUSINESS_NAME}
                     </span>
                   </h2>
                 </div>
                 <div className="box-border caret-transparent blur-0 max-w-none md:max-w-[360px]">
                   <div className="text-neutral-700 box-border caret-transparent">
                     <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                      We deliver professional exterior cleaning across Ayrshire and Glasgow. Fully insured, with the right equipment and methods for roofs, render, driveways, gutters, PVC and windows. Quality, reliability and customer satisfaction on every job.
+                      We deliver professional exterior cleaning across {META_AREA_PHRASE}. Fully insured, with the right equipment and methods for roofs, render, driveways, gutters, PVC and windows. Quality, reliability and customer satisfaction on every job.
                     </div>
                   </div>
                 </div>

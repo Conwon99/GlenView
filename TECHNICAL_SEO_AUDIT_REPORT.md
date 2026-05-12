@@ -1,5 +1,7 @@
 # Technical SEO Audit Report — Jimbos Cleaning
 
+> **Superseded:** Crawl data references a prior domain. Production is **GlenView Exterior Cleaning** (`glenviewexteriorcleaning.co.uk`); image paths have moved from `/jimbos/` to `/portfolio/`.
+
 **Source:** Screaming Frog crawl export (`internal_all.csv`)  
 **Total URLs crawled:** 336
 **HTML pages:** 317

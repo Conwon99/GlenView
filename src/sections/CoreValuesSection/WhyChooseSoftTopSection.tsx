@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const WhyChooseSoftTopSection = () => {
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -5,7 +7,7 @@ export const WhyChooseSoftTopSection = () => {
         <div className="box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:gap-x-10 md:flex-row md:gap-y-10">
           <div className="box-border caret-transparent gap-y-4 flex flex-col w-full max-w-full md:max-w-none md:w-auto md:max-w-[700px]">
             <div className="box-border caret-transparent blur-0 h-[300px] w-full overflow-hidden rounded-2xl md:h-[600px] md:w-full">
-              <img src="/Soft top restoration.jpg" sizes="(max-width: 767px) 100vw, 700px" alt="Double O Detailing - Soft Top Restoration" className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full" />
+              <img src="/Soft top restoration.jpg" sizes="(max-width: 767px) 100vw, 700px" alt={`${BUSINESS_NAME} - Soft top restoration`} className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full" />
             </div>
           </div>
           <div className="box-border caret-transparent blur-0 basis-[0%] grow max-w-none md:max-w-[544px]">

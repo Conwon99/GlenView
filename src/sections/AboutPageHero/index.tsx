@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const AboutPageHero = () => {
   return (
     <section className="box-border caret-transparent overflow-hidden pt-[120px] md:pt-[150px]">
@@ -38,9 +40,9 @@ export const AboutPageHero = () => {
           </div>
           <div className="box-border caret-transparent blur-0 h-[220px] overflow-hidden mt-7 rounded-2xl md:h-[642px] md:mt-10">
             <img
-              src="/jimbos/gal1.jpg"
+              src="/portfolio/gal1.jpg"
               sizes="100vw"
-              alt="Jimbos Cleaning - About Us"
+              alt={`${BUSINESS_NAME} — About us`}
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

@@ -6,11 +6,12 @@ import { AboutPageAbout } from '../sections/AboutPageAbout';
 import { ProcessSection } from '../sections/ProcessSection';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
 ---
 
 <Layout 
-  title="About Us - Jimbos Cleaning | Exterior Cleaning Ayrshire & Glasgow"
-  description="Learn about Jimbos Cleaning - professional exterior cleaning across Ayrshire and Glasgow. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Fully insured, mobile service."
+  title={`About Us - ${BUSINESS_NAME} | Exterior Cleaning ${META_AREA_PHRASE}`}
+  description={`Learn about ${BUSINESS_NAME} — professional exterior cleaning across ${META_AREA_PHRASE}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Fully insured, mobile service.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />

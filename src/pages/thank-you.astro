@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME } from '../constants/site';
 ---
 
 <Layout 
-  title="Thank You - Jimbos Cleaning"
-  description="Thank you for contacting Jimbos Cleaning. We'll get back to you soon."
+  title={`Thank You - ${BUSINESS_NAME}`}
+  description={`Thank you for contacting ${BUSINESS_NAME}. We'll get back to you soon.`}
   noindex={true}
 >
   <div class="min-h-screen bg-blue-50 font-figtree text-black text-sm leading-5 antialiased">

@@ -7,7 +7,7 @@ export const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{ 
-            backgroundImage: `url('/hero/jimhero.jpg')`,
+            backgroundImage: `url('/hero/hero-main.jpg')`,
             backgroundPosition: 'center'
           }}
         ></div>

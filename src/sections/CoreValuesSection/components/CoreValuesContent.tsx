@@ -1,3 +1,5 @@
+import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
+
 export const CoreValuesContent = () => {
   return (
     <div className="box-border caret-transparent blur-0 basis-[0%] grow max-w-none md:max-w-[544px]">
@@ -8,12 +10,12 @@ export const CoreValuesContent = () => {
       </div>
       <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
         <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
-          <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose Jimbos Cleaning?</span>
+          <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose {BUSINESS_NAME}?</span>
         </h2>
       </div>
       <div className="text-neutral-700 box-border caret-transparent">
         <p className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-          At Jimbos Cleaning we deliver professional exterior cleaning across Ayrshire and Glasgow. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning—we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
+          At {BUSINESS_NAME} we deliver professional exterior cleaning across {META_AREA_PHRASE}. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning—we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-3 mt-5">
           <div className="flex items-center gap-2">

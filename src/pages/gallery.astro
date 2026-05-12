@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
 
 const galleryImages = [
   "gal1.jpg",
@@ -11,19 +12,19 @@ const galleryImages = [
   "gal5.jpg",
   "gal6.jpg",
   "beforeafter.jpg",
-  "drivewaycleaningjimbo.jpg",
+  "driveway-cleaning.jpg",
   "roofclean1.jpg",
-  "rendersoftwashjimbo.jpg",
-  "presssurejimbo.jpg",
+  "render-softwash.jpg",
+  "pressure-washing.jpg",
+  "pvc-clean.jpg",
+  "window-cleaning.jpg",
   "pexels-revive-wash-2157256303-35153375 (1).jpg",
-  "pvc clean jimbo.jpg",
-  "window-cleaning jimbo.jpg",
 ];
 ---
 
 <Layout 
-  title="Gallery - Jimbos Cleaning | Our Exterior Cleaning Work"
-  description="View our exterior cleaning gallery. Roof, render, driveway and property cleaning across Ayrshire and Glasgow."
+  title={`Gallery - ${BUSINESS_NAME} | Our Exterior Cleaning Work`}
+  description={`View our exterior cleaning gallery. Roof, render, driveway and property cleaning across ${META_AREA_PHRASE}.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
@@ -44,85 +45,26 @@ const galleryImages = [
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mt-10 md:mt-14">
             {galleryImages.map((filename, index) => {
-              const src = `/jimbos/${encodeURIComponent(filename)}`;
+              const src = `/portfolio/${encodeURIComponent(filename)}`;
               return (
                 <div
                   class="relative box-border overflow-hidden rounded-lg md:rounded-xl aspect-[4/3] bg-blue-100"
                 >
                   <img
                     src={src}
-                    alt={`Jimbos Cleaning gallery photo ${index + 1}`}
+                    alt={`${BUSINESS_NAME} gallery photo ${index + 1}`}
                     class="w-full h-full object-cover"
-                    loading={index < 12 ? "eager" : "lazy"}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               );
             })}
-          </div>
-          <div class="box-border mt-8 text-center">
-            <div class="box-border flex justify-center">
-              <a
-                href="/contact/"
-                id="gallery-book-now-btn"
-                class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark transition"
-              >
-                <div class="relative box-border overflow-hidden">
-                  <div class="box-border">
-                    <div class="relative text-sm font-medium box-border leading-5 z-[2] md:text-base md:leading-6">
-                      BOOK NOW
-                    </div>
-                  </div>
-                  <div class="absolute box-border w-full">
-                    <div class="relative text-sm font-medium box-border leading-5 z-[2] md:text-base md:leading-6">
-                      BOOK NOW
-                    </div>
-                  </div>
-                </div>
-                <div class="text-white items-center bg-blue-600 box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
-                  <div class="relative box-border">
-                    <div class="box-border">
-                      <div class="box-border h-3.5 w-3.5">
-                        <img
-                          src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
-                          alt="Icon"
-                          class="box-border h-full w-full"
-                          style="filter: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(500%) hue-rotate(330deg) brightness(110%) contrast(85%)"
-                        />
-                      </div>
-                    </div>
-                    <div class="absolute bottom-[-200%] box-border left-[-200%]">
-                      <div class="box-border h-3.5 w-3.5">
-                        <img
-                          src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
-                          alt="Icon"
-                          class="box-border h-full w-full"
-                          style="filter: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(500%) hue-rotate(330deg) brightness(110%) contrast(85%)"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </section>
       <FooterSection client:load />
     </main>
   </div>
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-      const bookNowBtn = document.getElementById('gallery-book-now-btn');
-      if (bookNowBtn) {
-        bookNowBtn.addEventListener('click', function() {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'quoteButton_gallery', {
-              event_category: 'CTA',
-              event_label: 'Gallery Page'
-            });
-          }
-        });
-      }
-    });
-  </script>
 </Layout>
+

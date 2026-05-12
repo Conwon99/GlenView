@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
             <div className="box-border caret-transparent blur-0 max-w-none md:max-w-[360px]">
               <div className="text-neutral-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                  Trusted by watch enthusiasts and collectors across the UK. Our clients appreciate our expertise, attention to detail, and commitment to preserving their watches.
+                  Trusted by homeowners and businesses across Central Scotland—clients value straight answers, tidy crews, and predictable results on roof, render, driveway and gutter work.
                 </div>
               </div>
             </div>

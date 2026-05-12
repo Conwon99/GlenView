@@ -1,5 +1,7 @@
 # Technical SEO Audit – Jimbos Cleaning (jimboscleaning.com)
 
+> **Superseded:** Historical notes for a prior brand/domain. The live codebase targets **GlenView Exterior Cleaning** at `glenviewexteriorcleaning.co.uk`. Ignore domain and brand names below unless migrating legacy URLs.
+
 **Business:** Exterior cleaner | **Primary area:** Ayrshire  
 **Audit date:** 2025 | **Status:** Implemented fixes + remaining checklist
 

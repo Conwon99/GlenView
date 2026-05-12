@@ -1,6 +1,7 @@
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
 import type { Location } from "@/data/locations";
+import { BUSINESS_NAME } from "@/constants/site";
 
 type Props = { serviceSlug: string; location?: Location };
 
@@ -10,7 +11,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
   if (!detail || !service) return null;
 
   const { whyChoose } = detail;
-  const imageUrl = service.imageUrl || "/jimbos/roofclean1.jpg";
+  const imageUrl = service.imageUrl || "/portfolio/roofclean1.jpg";
   const locationLine =
     location?.neighborhoods?.length &&
     location.neighborhoods.length >= 2
@@ -28,7 +29,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
               <img
                 src={imageUrl}
                 sizes="(max-width: 767px) 100vw, 700px"
-                alt={`Jimbos Cleaning - ${service.title}`}
+                alt={`${BUSINESS_NAME} — ${service.title}`}
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

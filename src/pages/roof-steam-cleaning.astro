@@ -10,12 +10,13 @@ import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 import { getServiceBySlug } from '../data/services';
+import { BUSINESS_NAME } from '../constants/site';
 
 const service = getServiceBySlug('roof-steam-cleaning')!;
 ---
 
 <Layout
-  title={`${service.title} - Jimbos Cleaning | Ayrshire & Glasgow`}
+  title={`${service.title} - ${BUSINESS_NAME} | Central Scotland`}
   description={service.shortDescription}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">

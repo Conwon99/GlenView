@@ -20,7 +20,7 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/hero/jimhero.jpg')`,
+            backgroundImage: `url('/hero/hero-main.jpg')`,
             backgroundPosition: "40% center",
           }}
         />

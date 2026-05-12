@@ -1,6 +1,6 @@
 /**
  * Package data for Packages & Pricing page.
- * Exterior cleaning services – Jimbos Cleaning.
+ * Exterior cleaning services – GlenView Exterior Cleaning.
  */
 
 export type PackageSection = {
@@ -25,7 +25,7 @@ export type PackageData = {
   priceDisplay: string;
   /** Prerequisite note for maintenance packages */
   note?: string;
-  /** Optional image for the package (path under /packages/) */
+  /** Optional image URL (typically under `/portfolio/`). */
   imageUrl?: string;
 };
 
@@ -41,7 +41,7 @@ export const packagesData: PackageData[] = [
     title: "ROOF STEAM CLEANING",
     tagline: "Full roof clean",
     summary:
-      "Safe roof steam cleaning with moss and algae removal from roof tiles. Professional treatment for lasting results and improved curb appeal. Suitable for all roof types across Ayrshire and Glasgow.",
+      "Safe roof steam cleaning with moss and algae removal from roof tiles. Professional treatment for lasting results and improved curb appeal. Suitable for all roof types across Central Scotland.",
     sections: [
       {
         heading: "SERVICE INCLUDES",
@@ -55,7 +55,7 @@ export const packagesData: PackageData[] = [
       },
     ],
     priceDisplay: "From £POA",
-    imageUrl: "/packages/roof-steam.png",
+    imageUrl: "/portfolio/roofclean1.jpg",
   },
   {
     id: "render-softwash",
@@ -76,7 +76,7 @@ export const packagesData: PackageData[] = [
       },
     ],
     priceDisplay: "From £POA",
-    imageUrl: "/packages/render-softwash.png",
+    imageUrl: "/portfolio/render-softwash.jpg",
   },
   {
     id: "full-exterior",
@@ -104,7 +104,7 @@ export const packagesData: PackageData[] = [
       ],
     },
     priceDisplay: "From £POA",
-    imageUrl: "/packages/full-exterior.png",
+    imageUrl: "/portfolio/beforeafter.jpg",
   },
   {
     id: "driveway-gutter",
@@ -125,7 +125,7 @@ export const packagesData: PackageData[] = [
       },
     ],
     priceDisplay: "From £POA",
-    imageUrl: "/packages/driveway-gutter.png",
+    imageUrl: "/portfolio/gutter-cleaning.webp",
   },
   {
     id: "maintenance-plan",
@@ -147,7 +147,7 @@ export const packagesData: PackageData[] = [
     ],
     note: "Ideal after an initial full exterior or roof clean. Contact us to discuss your schedule.",
     priceDisplay: "From £POA",
-    imageUrl: "/packages/maintenance.png",
+    imageUrl: "/portfolio/window-cleaning.jpg",
   },
 ];
 

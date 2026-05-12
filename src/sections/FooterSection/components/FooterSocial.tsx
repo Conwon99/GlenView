@@ -1,3 +1,14 @@
+import {
+  BUSINESS_NAME,
+  PHONE_E164,
+  PHONE_DISPLAY,
+  REGISTERED_LOCALITY,
+  REGISTERED_POSTCODE,
+  REGISTERED_STREET,
+  META_AREA_PHRASE,
+  FACEBOOK_PROFILE_URL,
+} from "@/constants/site";
+
 export const FooterSocial = () => {
   return (
     <div className="box-border caret-transparent basis-[100%] md:basis-[0%] md:grow md:max-w-[250px]">
@@ -6,19 +17,27 @@ export const FooterSocial = () => {
       </div>
       <div className="box-border caret-transparent gap-x-0 flex flex-col gap-y-3">
         <div className="text-[15px] box-border caret-transparent leading-6 text-white/80 md:text-base">
-          <div className="font-medium text-white mb-1">Location</div>
-          <div>Ayrshire & Glasgow<br />2 West Bowhouse Way, Irvine</div>
+          <div className="font-medium text-white mb-1">Service area</div>
+          <div>
+            {META_AREA_PHRASE}
+            <br />
+            {REGISTERED_STREET}, {REGISTERED_LOCALITY}, {REGISTERED_POSTCODE}
+          </div>
         </div>
         <div className="text-[15px] box-border caret-transparent leading-6 text-white/80 md:text-base">
           <div className="font-medium text-white mb-1">Phone</div>
-          <div><a href="tel:+447919270128" className="hover:text-white">07919 270128</a></div>
+          <div>
+            <a href={`tel:${PHONE_E164}`} className="hover:text-white">
+              {PHONE_DISPLAY}
+            </a>
+          </div>
         </div>
         <div className="box-border caret-transparent gap-x-4 flex gap-y-0 mt-4">
           <a
-            href="https://www.facebook.com/profile.php?id=100076596473868"
+            href={FACEBOOK_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Jimbos Cleaning on Facebook"
+            aria-label={`${BUSINESS_NAME} on Facebook`}
             className="text-white/80 hover:text-white"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

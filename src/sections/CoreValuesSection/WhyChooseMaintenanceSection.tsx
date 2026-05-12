@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const WhyChooseMaintenanceSection = () => {
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -8,7 +10,7 @@ export const WhyChooseMaintenanceSection = () => {
               <img
                 src="/Maintenance.png"
                 sizes="(max-width: 767px) 100vw, 700px"
-                alt="Double O Detailing - Maintenance"
+                alt={`${BUSINESS_NAME} - Maintenance`}
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

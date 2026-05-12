@@ -1,8 +1,9 @@
 import type { APIRoute } from "astro";
 import { locationSlugs } from "../data/locations";
 import { serviceSlugs } from "../data/services";
+import { SITE_URL } from "../constants/site";
 
-const siteUrl = "https://jimboscleaning.com";
+const siteUrl = SITE_URL;
 
 const staticPages: string[] = [
   "",

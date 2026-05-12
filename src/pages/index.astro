@@ -11,11 +11,12 @@ import { HomeFAQ } from '../sections/FAQSection/HomeFAQ';
 import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
 ---
 
 <Layout 
-  title="Jimbos Cleaning - Professional Exterior Cleaning in Ayrshire & Glasgow"
-  description="Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Get a free quote for your property."
+  title={`${BUSINESS_NAME} - Professional Exterior Cleaning | ${META_AREA_PHRASE}`}
+  description={`Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across ${META_AREA_PHRASE}. Get a free quote for your property.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />

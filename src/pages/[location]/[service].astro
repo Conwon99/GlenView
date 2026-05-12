@@ -15,6 +15,7 @@ import { getServiceBySlug } from "../../data/services";
 import { getServiceDetail } from "../../data/serviceDetails";
 import { getLocationServiceIntro } from "../../data/locationServiceIntros";
 import { LocationServicePageIntro } from "../../sections/LocationPage";
+import { BUSINESS_NAME } from "../../constants/site";
 
 export async function getStaticPaths() {
   const { locationSlugs } = await import("../../data/locations");
@@ -36,7 +37,7 @@ if (!location || !service) {
   return Astro.redirect("/404");
 }
 
-const title = `${service.title} ${location.name} | Professional Exterior Cleaning | Jimbos Cleaning`;
+const title = `${service.title} ${location.name} | Professional Exterior Cleaning | ${BUSINESS_NAME}`;
 const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
 const detail = getServiceDetail(service.slug);

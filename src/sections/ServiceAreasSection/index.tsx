@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import { ServiceAreaMap } from "./ServiceAreaMap";
-import { locations } from "@/data/locations";
+import {
+  LOCATION_REGION_ORDER,
+  locationsInRegion,
+} from "@/data/locations";
+import { META_AREA_PHRASE } from "@/constants/site";
 
 const DESKTOP_BREAKPOINT = 1024;
 
@@ -28,28 +32,37 @@ export const ServiceAreasSection = () => {
             Areas We Cover
           </h2>
           <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[640px]">
-            We cover Ayrshire and southwest Glasgow with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
+            We cover {META_AREA_PHRASE} with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <details ref={detailsRef} open className="box-border group">
               <summary className="font-heading uppercase text-lg font-bold text-black cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center gap-2 before:content-[''] before:inline-block before:border-t-2 before:border-r-2 before:border-black before:w-2 before:h-2 before:rotate-45 before:shrink-0 before:transition-transform group-open:before:rotate-[-135deg]">
                 Locations
               </summary>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-neutral-700 md:text-base mt-4 pl-0 list-none lg:gap-x-6">
-                {locations.map((loc) => (
-                  <li key={loc.slug} className="flex items-center gap-2">
-                    <span className="text-neutral-800 shrink-0" aria-hidden>
-                      •
-                    </span>
-                    <a
-                      href={`/${loc.slug}`}
-                      className="hover:text-neutral-800 hover:underline transition-colors"
-                    >
-                      {loc.name}
-                    </a>
-                  </li>
+              <div className="mt-4 space-y-8">
+                {LOCATION_REGION_ORDER.map((region) => (
+                  <div key={region.id}>
+                    <h3 className="font-heading uppercase text-sm font-bold text-neutral-900 mb-3">
+                      {region.title}
+                    </h3>
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-neutral-700 md:text-base pl-0 list-none lg:gap-x-6">
+                      {locationsInRegion(region.id).map((loc) => (
+                        <li key={loc.slug} className="flex items-center gap-2">
+                          <span className="text-neutral-800 shrink-0" aria-hidden>
+                            •
+                          </span>
+                          <a
+                            href={`/${loc.slug}/`}
+                            className="hover:text-neutral-800 hover:underline transition-colors"
+                          >
+                            {loc.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </details>
             <div className="box-border w-full relative rounded-xl overflow-hidden aspect-[4/3] min-h-[280px] lg:min-h-[320px]">
               <ServiceAreaMap />

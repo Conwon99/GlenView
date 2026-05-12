@@ -5,11 +5,12 @@ import { ServicePageHero } from '../sections/ServicePageHero';
 import { ServicePageServices } from '../sections/ServicePageServices';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
+import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
 ---
 
 <Layout 
-  title="Our Services - Jimbos Cleaning | Roof, Render, Driveway & More"
-  description="Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Professional exterior cleaning for your property."
+  title={`Our Services - ${BUSINESS_NAME} | Roof, Render, Driveway & More`}
+  description={`Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning across ${META_AREA_PHRASE}. Professional exterior cleaning for your property.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />

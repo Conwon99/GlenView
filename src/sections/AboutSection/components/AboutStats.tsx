@@ -7,30 +7,30 @@ export const AboutStats = () => {
         digits={["7", "8", "9", "0", "2"]}
         animationDigits={["2", "1", "2", "3", "4", "5"]}
         suffix="+"
-        title="Watches Restored"
-        description="Bringing heritage watches back to life with masterful craftsmanship."
+        title="Happy customers referred and repeat bookings"
+        description="Roofs, render, driveways and more—trusted across North Glasgow & Central Scotland."
         hasMultipleRows={true}
       />
       <StatCard
         digits={["7", "8", "9", "0", "2"]}
         animationDigits={["0", "1", "2", "3", "4", "5"]}
-        suffix="+"
-        title="Welcome to AM/PM Watch Repair."
-        description="Expert Watch Repair & Restoration Since 2015"
+        suffix=""
+        title="Responsive quotes & scheduling"
+        description="We aim to reply quickly so you know cost and timings before work starts."
       />
       <StatCard
         digits={["7", "8", "9", "0", "9"]}
         animationDigits={["8", "1", "2", "3", "4", "5"]}
         suffix="%"
-        title="Customer Satisfaction"
-        description="Trusted by Collectors for Precision Craftsmanship"
+        title="Pride taken on every job"
+        description="Careful technique, respectful crews, tidy sites—we treat your property like our own."
       />
       <StatCard
         digits={["7", "8", "9", "0", "5"]}
         animationDigits={["0", "1", "2", "3", "4", "5"]}
         suffix="+"
-        title="Watch Brands Serviced"
-        description="Expert Care for All Major Watch Brands"
+        title="Neighbourhoods covered weekly"
+        description="Serving Bishopbriggs, Falkirk, Stirling, Lanarkshire and surrounds."
         hasMultipleRows={false}
       />
     </div>

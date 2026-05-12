@@ -5,9 +5,9 @@ export const ServicePageHero = () => {
         <div className="box-border caret-transparent pb-[60px] md:pb-[100px]">
           <div className="items-start box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:items-center md:gap-x-10 md:flex-row md:gap-y-10">
             <div className="items-start box-border caret-transparent gap-x-4 flex blur-0 flex-col max-w-none gap-y-4 md:max-w-[555px]">
-              <h1 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-cabinet">
+              <h1 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading normal-case">
                 Expert Exterior{" "}
-                <span className="text-[44px] box-border caret-transparent leading-[52px] font-cabinet md:text-7xl md:leading-[80px]">
+                <span className="text-[44px] box-border caret-transparent leading-[52px] font-heading md:text-7xl md:leading-[80px]">
                   Cleaning Services
                 </span>
               </h1>
@@ -39,10 +39,14 @@ export const ServicePageHero = () => {
           </div>
           <div className="box-border caret-transparent blur-0 h-[220px] overflow-hidden mt-7 rounded-2xl md:h-[642px] md:mt-10">
             <img
-              src="/hero/jimhero.jpg"
+              src="/hero/hero-main.jpg"
               sizes="100vw"
               alt="Exterior cleaning services - roof, render, driveway, gutters, PVC and windows"
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
+              width={1920}
+              height={1080}
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>

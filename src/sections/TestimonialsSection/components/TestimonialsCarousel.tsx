@@ -1,31 +1,33 @@
 import { TestimonialCard } from "@/sections/TestimonialsSection/components/TestimonialCard";
+import { BUSINESS_NAME } from "@/constants/site";
 
 export const TestimonialsCarousel = () => {
+  const alt = `${BUSINESS_NAME} — customer photo`;
   return (
     <div className="box-border caret-transparent grid gap-6 md:grid-cols-3">
       <TestimonialCard
         ariaLabel="Testimonial 1"
-        imageUrl="/g1.jpeg"
-        imageAlt="AM|PM Watch Repair Gallery"
+        imageUrl="/portfolio/gal1.jpg"
+        imageAlt={alt}
         iconUrl="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-15.svg"
-        testimonialText="&quot;They restored my grandfather's pocket watch with incredible precision and attention to detail. It runs perfectly now.&quot;"
-        authorName="Daniel Harper"
+        testimonialText={'"The standard of service was 1st class. Roof and gutters look immaculate—would certainly recommend."'}
+        authorName="Elaine Langlands"
       />
       <TestimonialCard
         ariaLabel="Testimonial 2"
-        imageUrl="/g2.jpeg"
-        imageAlt="AM|PM Watch Repair Gallery"
+        imageUrl="/portfolio/gal2.jpg"
+        imageAlt={alt}
         iconUrl="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-16.svg"
-        testimonialText="I bring my vintage Rolex in for regular servicing, and they always exceed my expectations. True master craftsmen."
-        authorName="Srihas Kapoor"
+        testimonialText={'"Roof and gutters look great—the whole property is much tidier. Highly recommend."'}
+        authorName="Baxter"
       />
       <TestimonialCard
         ariaLabel="Testimonial 3"
-        imageUrl="/g3.jpeg"
-        imageAlt="AM|PM Watch Repair Gallery"
+        imageUrl="/portfolio/gal3.jpg"
+        imageAlt={alt}
         iconUrl="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-16.svg"
-        testimonialText="I didn't know if my broken watch could be saved. Their team worked miracles and brought it back to life beautifully."
-        authorName="Michael Reyes"
+        testimonialText={'"Attention to detail is second to none—driveway and windows always look brilliant."'}
+        authorName="Katie Lindsay"
       />
     </div>
   );

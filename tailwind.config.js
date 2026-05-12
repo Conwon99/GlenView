@@ -63,8 +63,6 @@ module.exports = {
         "figtree": ["Figtree", "sans-serif"],
         "cormorant": ["Cormorant Garamond", "serif"],
         "lato": ["Lato", "sans-serif"],
-        "cabinet": ["CabinetGrotesk-Variable", "CabinetGrotesk-Regular", "ui-sans-serif", "system-ui", "sans-serif"],
-        "refrigerator": ["RefrigeratorDeluxe", "ui-sans-serif", "system-ui", "sans-serif"],
         "heading": ["'Plus Jakarta Sans'", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       keyframes: {

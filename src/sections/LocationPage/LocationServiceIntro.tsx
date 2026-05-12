@@ -1,4 +1,5 @@
 import type { Location } from "@/data/locations";
+import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
 
 export type LocationServiceIntroProps = {
   location: Location;
@@ -15,9 +16,9 @@ export const LocationServiceIntro = ({ location }: LocationServiceIntroProps) =>
           <div className="box-border caret-transparent gap-y-4 flex flex-col w-full max-w-full md:max-w-none md:w-auto md:max-w-[700px]">
             <div className="box-border caret-transparent blur-0 h-[300px] w-full overflow-hidden rounded-2xl md:h-[600px] md:w-full">
               <img
-                src="/jimbos/gal1.jpg"
+                src="/portfolio/gal1.jpg"
                 sizes="(max-width: 767px) 100vw, 700px"
-                alt={`Jimbos Cleaning – exterior cleaning in ${name}`}
+                alt={`${BUSINESS_NAME} – exterior cleaning in ${name}`}
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
                 loading="lazy"
               />
@@ -32,12 +33,12 @@ export const LocationServiceIntro = ({ location }: LocationServiceIntroProps) =>
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
               <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
-                <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose Jimbos Cleaning?</span>
+                <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose {BUSINESS_NAME}?</span>
               </h2>
             </div>
             <div className="text-neutral-700 box-border caret-transparent">
               <p className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                At Jimbos Cleaning we deliver professional exterior cleaning across Ayrshire and Glasgow—including {name}{neighborhoods.length ? ` and nearby areas` : ""}. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning, we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
+                At {BUSINESS_NAME} we deliver professional exterior cleaning across {META_AREA_PHRASE}—including {name}{neighborhoods.length ? ` and nearby areas` : ""}. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning, we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-3 mt-5">
                 <div className="flex items-center gap-2">

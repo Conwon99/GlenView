@@ -1,6 +1,5 @@
 import { useRef } from "react";
-
-const GOOGLE_PROFILE_URL = "https://share.google/WHM6HVMqy1SvwnkkX";
+import { GOOGLE_REVIEWS_URL } from "@/constants/site";
 
 const REVIEWS = [
   {
@@ -17,7 +16,7 @@ const REVIEWS = [
     time: "a month ago",
     initial: "B",
     initialBg: "bg-amber-500",
-    text: "Professional exterior cleaning from Jimbos Cleaning. Arrived on time, polite and thorough. The roof and gutters look great and the whole property is much tidier. Would recommend for anyone in Ayrshire looking for roof or gutter cleaning.",
+    text: "Professional exterior cleaning from GlenView Exterior Cleaning. Arrived on time, polite and thorough. The roof and gutters look great and the whole property is much tidier. Would recommend for anyone in Central Scotland looking for roof or gutter cleaning.",
   },
   {
     name: "Katie Lindsay",
@@ -66,7 +65,7 @@ export function StaticReviews() {
       <div className="max-w-[1204px] mx-auto px-5 md:px-8">
         <h2 className="text-center md:text-left mb-10 md:mb-12">
           <a
-            href={GOOGLE_PROFILE_URL}
+            href={GOOGLE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase text-white hover:text-white/90 transition-colors"
@@ -110,7 +109,7 @@ export function StaticReviews() {
                 <div className="flex items-center justify-between mt-auto">
                   <StarRating />
                   <a
-                    href={GOOGLE_PROFILE_URL}
+                    href={GOOGLE_REVIEWS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0"

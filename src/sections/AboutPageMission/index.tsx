@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const AboutPageMission = () => {
   return (
     <section className="box-border caret-transparent py-[60px] md:py-[100px]">
@@ -16,10 +18,10 @@ export const AboutPageMission = () => {
             </div>
             <div className="text-neutral-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                At Double-O Detailing, excellence starts at the top. We bring years of hands-on experience, professional training, and a passion for automotive care to every vehicle we service.
+                At {BUSINESS_NAME}, we combine hands-on experience with the right equipment for roofs, render, driveways, gutters, PVC and windows — always prioritising methods that protect your property.
               </div>
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                With extensive knowledge of the latest detailing techniques, products, and technologies, our owner has mastered the art of restoring, protecting, and enhancing vehicles of all types.
+                We stay up to date with effective exterior cleaning techniques and treatments. Fully insured and focused on clear communication from quote to completion.
               </div>
             </div>
           </div>
@@ -27,7 +29,7 @@ export const AboutPageMission = () => {
             <img
               src="/about1.jpeg"
               sizes="(max-width: 767px) 100vw, 500px"
-              alt="Jimbos Cleaning"
+              alt={BUSINESS_NAME}
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

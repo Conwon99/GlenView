@@ -1,5 +1,7 @@
 # SEO Audit – Double O Detailing
 
+> **Superseded:** Historical export. Current site: **GlenView Exterior Cleaning** — `glenviewexteriorcleaning.co.uk`.
+
 **Site:** doubleodetailing.co.uk  
 **Audit date:** February 2026  
 **Scope:** Technical SEO, on-page SEO, structure, and recommendations.

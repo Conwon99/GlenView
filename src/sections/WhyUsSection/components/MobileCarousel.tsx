@@ -16,16 +16,16 @@ export const MobileCarousel = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-11.svg"
-              title="Major Swiss Brand Experience"
-              description="Over a decade of professional horological experience, having worked for major Swiss brands including Omega, Longines, Tissot & Hamilton, and served as in-house watchmakers for well-known high-street jewellers."
+              title="Built for Scottish exteriors"
+              description="Hands-on experience with mossy roofs, stained render, gutters and driveways—we pick the right method for each surface."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="/jimbos/gal1.jpg"
+                src="/portfolio/gal1.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -39,16 +39,16 @@ export const MobileCarousel = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-12.svg"
-              title="Direct Communication & Fast Turnaround"
-              description="Being fully independent means you deal directly with the watchmaker—no intermediaries. This allows for clear communication, transparent explanations, and consistently tighter turnaround times, typically 3–5 weeks."
+              title="Straight talking & scheduling"
+              description="Clear scopes and pricing—you deal with us directly, so there are fewer surprises once we’re on site."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="/jimbos/gal2.jpg"
+                src="/portfolio/gal2.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -62,16 +62,16 @@ export const MobileCarousel = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-13.svg"
-              title="Wide Range of Expertise"
-              description="We work on both modern and vintage watches, carrying out everything from glass replacements to complete mechanical services. Our expertise allows us to work on almost any brand that comes in for repair with no job too small."
+              title="Wide-ranging exterior skills"
+              description="Steam cleaning, render softwashing, pressure washing, gutter clearing and PVC detailing—coordinate it all together."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="/jimbos/gal3.jpg"
+                src="/portfolio/gal3.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -85,15 +85,15 @@ export const MobileCarousel = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-14.svg"
-              title="Utmost Care & Respect"
-              description="As watch enthusiasts ourselves, we fully appreciate the value and often deep sentimental importance that watches can hold. Every watch is treated with the utmost care and respect throughout the entire service process."
+              title="Respectful crews"
+              description="We guard landscaping, cladding and finishes like they’re our own and leave walkways safe before we clock off."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="/jimbos/gal4.jpg"
-                alt="Jimbos Cleaning - Our work"
+                src="/portfolio/gal4.jpg"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

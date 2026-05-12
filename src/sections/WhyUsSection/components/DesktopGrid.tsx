@@ -63,16 +63,16 @@ export const DesktopGrid = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-11.svg"
-              title="Major Swiss Brand Experience"
-              description="Over a decade of professional horological experience, having worked for major Swiss brands including Omega, Longines, Tissot & Hamilton, and served as in-house watchmakers for well-known high-street jewellers."
+              title="Built for Scottish exteriors"
+              description="Years of hands-on work on mossy roofs, algae-stained render, clogged gutters and tired driveways—we match the method to the substrate, not a one-size wash."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="/jimbos/gal1.jpg"
+                src="/portfolio/gal1.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -86,16 +86,16 @@ export const DesktopGrid = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-12.svg"
-              title="Direct Communication & Fast Turnaround"
-              description="Being fully independent means you deal directly with the watchmaker—no intermediaries. This allows for clear communication, transparent explanations, and consistently tighter turnaround times, typically 3–5 weeks."
+              title="Straight talking & planning"
+              description="You hear from us directly—scope, access and pricing explained up front—so bookings stay predictable and sites stay orderly from arrival to rinse-down."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="/jimbos/gal2.jpg"
+                src="/portfolio/gal2.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -109,16 +109,16 @@ export const DesktopGrid = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-13.svg"
-              title="Bespoke Watch Solutions"
-              description="Custom watches designed to your exact specifications, combining traditional craftsmanship with modern innovation."
+              title="Multiple exterior disciplines"
+              description="Steam and low-pressure washing, biocide-treated softwashing, gutter clearing, fascia brightening and finishing detail—coordinate everything with one accountable crew."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="/jimbos/gal3.jpg"
+                src="/portfolio/gal3.jpg"
                 sizes="100vw"
-                alt="Jimbos Cleaning - Our work"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -132,15 +132,15 @@ export const DesktopGrid = () => {
           <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 md:flex-row">
             <FeatureCard
               iconSrc="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-14.svg"
-              title="Utmost Care & Respect"
-              description="As watch enthusiasts ourselves, we fully appreciate the value and often deep sentimental importance that watches can hold. Every watch is treated with the utmost care and respect throughout the entire service process."
+              title="Respectful of your property"
+              description="We treat gardens, patios, paintwork and neighbours with care—protection where it matters and a proper tidy-up when we're finished."
               variant=""
               iconVariant=""
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="/jimbos/gal4.jpg"
-                alt="Jimbos Cleaning - Our work"
+                src="/portfolio/gal4.jpg"
+                alt="GlenView Exterior Cleaning — our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

@@ -1,13 +1,20 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../sections/Navbar";
-import { locations } from "../../data/locations";
+import {
+  LOCATION_REGION_ORDER,
+  locationsInRegion,
+} from "../../data/locations";
 import { FooterSection } from "../../sections/FooterSection";
+import {
+  BUSINESS_NAME,
+  META_AREA_PHRASE,
+} from "../../constants/site";
 ---
 
 <Layout
-  title="Our Service Areas | Exterior Cleaning Near You | Jimbos Cleaning"
-  description="Exterior cleaning across Ayrshire and Glasgow. We come to you in Irvine, Kilmarnock, Ayr, Troon, Prestwick and more. Roof, driveway, gutter and window cleaning. Get a free quote."
+  title={`Our Service Areas | Exterior Cleaning Near You | ${BUSINESS_NAME}`}
+  description={`Exterior cleaning across ${META_AREA_PHRASE}. We cover Bishopbriggs, Falkirk, Stirling, Coatbridge, Cumbernauld and surrounding towns. Roof, driveway, gutter and window cleaning. Get a free quote.`}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
@@ -18,27 +25,37 @@ import { FooterSection } from "../../sections/FooterSection";
             Our service areas
           </h1>
           <p class="text-neutral-700 text-base md:text-lg max-w-[640px] mb-12">
-            We provide mobile exterior cleaning across Ayrshire and Glasgow. Select your area to see our services and book.
+            We provide mobile exterior cleaning across {META_AREA_PHRASE}. Select your area to see our services and book.
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {locations.map((loc) => (
-              <a
-                href={`/${loc.slug}`}
-                class="block p-6 rounded-lg border border-neutral-200 bg-white hover:border-cta hover:shadow-md transition-all"
-              >
-                <h2 class="text-xl font-bold font-heading uppercase text-black mb-2">
-                  {loc.name}
+          {LOCATION_REGION_ORDER.map((region) => {
+            const regionLocs = locationsInRegion(region.id);
+            return (
+              <div class="mb-14 last:mb-0">
+                <h2 class="text-xl md:text-2xl font-heading uppercase font-bold text-black mb-6 border-b border-neutral-200 pb-2">
+                  {region.title}
                 </h2>
-                <p class="text-[15px] text-neutral-600 leading-6">
-                  Exterior cleaning in {loc.name}
-                  {loc.neighborhoods?.length ? ` and nearby areas` : ""}. Book online or get in touch.
-                </p>
-                <span class="inline-block mt-3 text-sm font-medium text-neutral-800">
-                  View services →
-                </span>
-              </a>
-            ))}
-          </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {regionLocs.map((loc) => (
+                    <a
+                      href={`/${loc.slug}/`}
+                      class="block p-6 rounded-lg border border-neutral-200 bg-white hover:border-cta hover:shadow-md transition-all"
+                    >
+                      <h3 class="text-xl font-bold font-heading uppercase text-black mb-2">
+                        {loc.name}
+                      </h3>
+                      <p class="text-[15px] text-neutral-600 leading-6">
+                        Exterior cleaning in {loc.name}
+                        {loc.neighborhoods?.length ? ` and nearby areas` : ""}. Book online or get in touch.
+                      </p>
+                      <span class="inline-block mt-3 text-sm font-medium text-neutral-800">
+                        View services →
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
       <FooterSection client:load />

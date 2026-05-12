@@ -1,8 +1,13 @@
-/** Business address (2 West Bowhouse Way, Irvine) - used when no location prop is passed */
+import {
+  BUSINESS_NAME,
+  REGISTERED_GEO,
+  REGISTERED_LOCALITY,
+} from "@/constants/site";
+
 const DEFAULT_MAP = {
-  lat: "55.6190",
-  lng: "-4.6551",
-  name: "Jimbos Cleaning, Irvine",
+  lat: REGISTERED_GEO.latitude,
+  lng: REGISTERED_GEO.longitude,
+  name: `${BUSINESS_NAME}, ${REGISTERED_LOCALITY}`,
 };
 
 export type FooterMapProps = {
@@ -33,7 +38,7 @@ export const FooterMap = ({ mapLocation }: FooterMapProps) => {
       </div>
       <div className="box-border caret-transparent rounded-xl overflow-hidden border border-white/20 aspect-[16/9] min-h-[200px] md:min-h-[220px]">
         <iframe
-          title={mapLocation ? `Map of ${name}` : "Jimbos Cleaning business location"}
+          title={mapLocation ? `Map of ${name}` : `${BUSINESS_NAME} — Bishopbriggs area`}
           src={embedUrl}
           className="box-border w-full h-full border-0"
           loading="lazy"

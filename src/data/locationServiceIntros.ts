@@ -20,7 +20,7 @@ const introVariants: Record<
     {
       heading: "Roof steam cleaning in {location}",
       paragraphs: [
-        "We’ve done plenty of roof cleans in and around {location}—moss and algae build up fast here with the weather. Whether you’re in the town itself or out towards {n1} or {n2}, we bring the same steam cleaning and moss treatment we use across Ayrshire.",
+        "We’ve done plenty of roof cleans in and around {location}—moss and algae build up fast here with the weather. Whether you’re in the town itself or out towards {n1} or {n2}, we bring the same steam cleaning and moss treatment we use across Central Scotland.",
         "No high pressure, so your tiles stay in good nick. Get in touch for a free quote and we’ll sort a date that suits you.",
       ],
     },

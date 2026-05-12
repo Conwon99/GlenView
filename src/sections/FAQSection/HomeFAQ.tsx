@@ -4,7 +4,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "We cover Ayrshire and southwest Glasgow, including Irvine, Kilmarnock, Ayr, Troon, Prestwick, Paisley, Saltcoats, Ardrossan, Largs, and many more. Get in touch to confirm we cover your area.",
+      "We cover North Glasgow, East Dunbartonshire, North Lanarkshire and east toward Falkirk and Stirling — including Bishopbriggs, Kirkintilloch, Cumbernauld, Coatbridge, Airdrie, Falkirk, Stirling and surrounding towns listed on our areas page. Get in touch to confirm we cover your postcode.",
   },
   {
     question: "What services do you offer?",

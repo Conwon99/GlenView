@@ -16,7 +16,7 @@ export type ServiceDetailContent = {
 export const serviceDetails: Record<string, ServiceDetailContent> = {
   "roof-steam-cleaning": {
     heroDescription:
-      "Professional roof steam cleaning with safe moss and algae removal from roof tiles. We bring expert Ayrshire roof cleaning to your property—effective, environmentally friendly treatment that protects your roof and improves curb appeal.",
+      "Professional roof steam cleaning with safe moss and algae removal from roof tiles. Effective, environmentally friendly treatment that protects your roof and improves curb appeal across Central Scotland.",
     whyChoose: {
       title: "Why Choose Our Roof Steam Cleaning?",
       points: [
@@ -67,7 +67,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
         {
           title: "Experienced Team",
           description:
-            "We're used to working on residential and commercial properties across Ayrshire and Glasgow.",
+            "We're used to working on residential and commercial properties across North Glasgow, Lanarkshire, Falkirk and Stirling.",
         },
       ],
     },

@@ -1,11 +1,31 @@
+import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
+
 export const GalleryGrid = () => {
   const images = [
-    { src: "/jimbos/gal1.jpg", alt: "Exterior cleaning and roof cleaning work in Ayrshire" },
-    { src: "/jimbos/gal2.jpg", alt: "Professional roof and property cleaning by Jimbos Cleaning" },
-    { src: "/jimbos/gal3.jpg", alt: "Render softwashing and exterior cleaning results" },
-    { src: "/jimbos/gal4.jpg", alt: "Driveway and gutter cleaning in Ayrshire and Glasgow" },
-    { src: "/jimbos/gal5.jpg", alt: "Roof steam cleaning and moss removal - before and after" },
-    { src: "/jimbos/gal6.jpg", alt: "PVC and window cleaning - Jimbos Cleaning gallery" },
+    {
+      src: "/portfolio/gal1.jpg",
+      alt: `Roof and exterior cleaning — ${META_AREA_PHRASE}`,
+    },
+    {
+      src: "/portfolio/gal2.jpg",
+      alt: `Professional roof and property cleaning — ${BUSINESS_NAME}`,
+    },
+    {
+      src: "/portfolio/gal3.jpg",
+      alt: "Render softwashing and exterior cleaning results",
+    },
+    {
+      src: "/portfolio/gal4.jpg",
+      alt: `Driveway and gutter cleaning — ${META_AREA_PHRASE}`,
+    },
+    {
+      src: "/portfolio/gal5.jpg",
+      alt: "Roof steam cleaning and moss removal — before and after",
+    },
+    {
+      src: "/portfolio/gal6.jpg",
+      alt: `PVC and window cleaning — ${BUSINESS_NAME} gallery`,
+    },
   ];
 
   return (
@@ -29,7 +49,10 @@ export const GalleryGrid = () => {
             sizes="100vw"
             alt={image.alt}
             className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
-            loading={index < 3 ? "eager" : "lazy"}
+            width={1200}
+            height={900}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
             onError={(e) => {
               console.error("Failed to load image:", image.src);
             }}

@@ -12,9 +12,9 @@ const PACKAGES_HERO_IMAGE = "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (
 
 /** Service section images from home page - used as section headers */
 const categoryImages: Record<PackageData["category"], string> = {
-  "roof-cleaning": "/jimbos/roofclean1.jpg",
-  "exterior-clean": "/jimbos/drivewaycleaningjimbo.jpg",
-  maintenance: "/jimbos/presssurejimbo.jpg",
+  "roof-cleaning": "/portfolio/roofclean1.jpg",
+  "exterior-clean": "/portfolio/driveway-cleaning.jpg",
+  maintenance: "/portfolio/pressure-washing.jpg",
 };
 
 export const PackagesOverview = () => {

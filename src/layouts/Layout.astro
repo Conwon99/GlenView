@@ -1,6 +1,18 @@
 ---
 import '../styles/tailwind.css';
 import { locations } from '../data/locations';
+import {
+  SITE_URL,
+  BUSINESS_NAME,
+  PHONE_E164,
+  REGISTERED_STREET,
+  REGISTERED_LOCALITY,
+  REGISTERED_REGION,
+  REGISTERED_POSTCODE,
+  REGISTERED_GEO,
+  META_AREA_PHRASE,
+  FACEBOOK_PROFILE_URL,
+} from '../constants/site';
 
 interface LocationSchemaProp {
   name: string;
@@ -20,7 +32,7 @@ interface Props {
   locationSchema?: LocationSchemaProp;
 }
 
-const siteUrl = "https://jimboscleaning.com";
+const siteUrl = SITE_URL;
 // Canonical: trailing slash (trailingSlash: 'always' in astro.config).
 const pathname = Astro.url.pathname;
 const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
@@ -28,9 +40,9 @@ const defaultCanonical =
   pathWithSlash === "/" ? `${siteUrl}/` : `${siteUrl}${pathWithSlash}`;
 
 const {
-  title = "Jimbos Cleaning - Professional Exterior Cleaning in Ayrshire & Glasgow",
-  description = "Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Professional exterior cleaning services for your home or business.",
-  image = "https://jimboscleaning.com/logo.png",
+  title = `${BUSINESS_NAME} - Professional Exterior Cleaning | ${META_AREA_PHRASE}`,
+  description = `Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across ${META_AREA_PHRASE}. Professional exterior cleaning for your home or business.`,
+  image = `${SITE_URL}/og-default.png`,
   type = "website",
   canonical = defaultCanonical,
   noindex = false,
@@ -41,8 +53,10 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
 const defaultAreaServed = [
   ...locations.map((loc) => ({ "@type": "City", "name": loc.name })),
-  { "@type": "State", "name": "Ayrshire" },
-  { "@type": "City", "name": "Glasgow" },
+  { "@type": "AdministrativeArea", "name": "East Dunbartonshire" },
+  { "@type": "AdministrativeArea", "name": "North Lanarkshire" },
+  { "@type": "AdministrativeArea", "name": "Falkirk" },
+  { "@type": "AdministrativeArea", "name": "Stirling" },
 ];
 ---
 
@@ -51,20 +65,17 @@ const defaultAreaServed = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="roof cleaning, exterior cleaning, roof steam cleaning, render softwashing, driveway cleaning, gutter cleaning, PVC cleaning, window cleaning, Ayrshire, Glasgow, moss removal, algae removal" />
-    <meta name="author" content="Jimbos Cleaning" />
+    <meta name="author" content={BUSINESS_NAME} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
     <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
@@ -75,7 +86,9 @@ const defaultAreaServed = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={fullImageUrl} />
-    <meta property="og:site_name" content="Jimbos Cleaning" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={BUSINESS_NAME} />
     <meta property="og:locale" content="en_GB" />
     
     <!-- Twitter -->
@@ -87,14 +100,14 @@ const defaultAreaServed = [
     
     <!-- Business Information -->
     <meta name="geo.region" content="GB-SCT" />
-    <meta name="geo.placename" content="Ayrshire, Scotland" />
-    <meta name="geo.position" content="55.6190;-4.6551" />
-    <meta name="ICBM" content="55.6190, -4.6551" />
+    <meta name="geo.placename" content="Bishopbriggs, Scotland" />
+    <meta name="geo.position" content={`${REGISTERED_GEO.latitude};${REGISTERED_GEO.longitude}`} />
+    <meta name="ICBM" content={`${REGISTERED_GEO.latitude}, ${REGISTERED_GEO.longitude}`} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJS781CJF"></script>
@@ -108,26 +121,26 @@ const defaultAreaServed = [
     <!-- JSON-LD Schema: LocalBusiness (primary) -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://jimboscleaning.com/#localbusiness",
-      "name": "Jimbos Cleaning",
-      "alternateName": "Jimbo's Exterior Cleaning",
-      "description": "Expert roof cleaning and exterior cleaning services in Ayrshire and Glasgow. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
-      "url": "https://jimboscleaning.com",
-      "logo": "https://jimboscleaning.com/logo.png",
-      "image": "https://jimboscleaning.com/logo.png",
-      "telephone": "+447919270128",
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      "@id": `${siteUrl}/#localbusiness`,
+      "name": BUSINESS_NAME,
+      "description": `Expert roof cleaning and exterior cleaning across ${META_AREA_PHRASE}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.`,
+      "url": siteUrl,
+      "logo": `${siteUrl}/logo.png`,
+      "image": [`${siteUrl}/logo.png`, `${siteUrl}/og-default.png`],
+      "telephone": PHONE_E164,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2 West Bowhouse Way",
-        "addressLocality": "Irvine",
-        "addressRegion": "Ayrshire",
+        "streetAddress": REGISTERED_STREET,
+        "addressLocality": REGISTERED_LOCALITY,
+        "addressRegion": REGISTERED_REGION,
+        "postalCode": REGISTERED_POSTCODE,
         "addressCountry": "GB"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "55.6190",
-        "longitude": "-4.6551"
+        "latitude": REGISTERED_GEO.latitude,
+        "longitude": REGISTERED_GEO.longitude
       },
       "areaServed": defaultAreaServed,
       "serviceType": [
@@ -140,7 +153,7 @@ const defaultAreaServed = [
         "Window Cleaning",
         "Exterior Cleaning"
       ],
-      "priceRange": "$$",
+      "priceRange": "££",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -148,48 +161,33 @@ const defaultAreaServed = [
         "closes": "18:00"
       },
       "sameAs": [
-        "https://www.facebook.com/profile.php?id=100076596473868"
+        FACEBOOK_PROFILE_URL
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "23",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "parentOrganization": { "@id": "https://jimboscleaning.com/#organization" }
+      "parentOrganization": { "@id": `${siteUrl}/#organization` }
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "@id": "https://jimboscleaning.com/#website",
-      "name": "Jimbos Cleaning",
-      "url": "https://jimboscleaning.com",
-      "description": "Professional exterior cleaning in Ayrshire and Glasgow. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
-      "publisher": { "@id": "https://jimboscleaning.com/#organization" },
-      "inLanguage": "en-GB",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://jimboscleaning.com/contact?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "@id": `${siteUrl}/#website`,
+      "name": BUSINESS_NAME,
+      "url": siteUrl,
+      "description": `Professional exterior cleaning across ${META_AREA_PHRASE}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.`,
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "inLanguage": "en-GB"
     })} />
     
     {locationSchema && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": `Jimbos Cleaning – ${locationSchema.name}`,
+        "name": `${BUSINESS_NAME} – ${locationSchema.name}`,
         "description": "Professional exterior cleaning: roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
-        "url": `${siteUrl}/${locationSchema.slug}`,
-        "telephone": "+447919270128",
+        "url": `${siteUrl}/${locationSchema.slug}/`,
+        "telephone": PHONE_E164,
         "address": {
           "@type": "PostalAddress",
           "addressLocality": locationSchema.addressLocality,
-          "addressRegion": "Ayrshire",
+          "addressRegion": "Scotland",
           "addressCountry": "GB"
         },
         "geo": {
@@ -199,33 +197,26 @@ const defaultAreaServed = [
         },
         "areaServed": { "@type": "City", "name": locationSchema.addressLocality },
         "serviceType": ["Roof Cleaning", "Render Softwashing", "Driveway Cleaning", "Gutter Cleaning", "PVC Cleaning", "Window Cleaning", "Exterior Cleaning"],
-        "priceRange": "$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "23",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        "priceRange": "££"
       })} />
     )}
     
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://jimboscleaning.com/#organization",
-      "name": "Jimbos Cleaning",
-      "url": "https://jimboscleaning.com",
-      "logo": "https://jimboscleaning.com/logo.png",
+      "@id": `${siteUrl}/#organization`,
+      "name": BUSINESS_NAME,
+      "url": siteUrl,
+      "logo": `${siteUrl}/logo.png`,
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+447919270128",
+        "telephone": PHONE_E164,
         "contactType": "Customer Service",
         "areaServed": "GB",
         "availableLanguage": "English"
       },
       "sameAs": [
-        "https://www.facebook.com/profile.php?id=100076596473868"
+        FACEBOOK_PROFILE_URL
       ]
     })} />
   </head>

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.glenviewexteriorcleaning.co.uk" }],
+      "destination": "https://glenviewexteriorcleaning.co.uk/:path*",
+      "permanent": true
+    }
+  ]
+}

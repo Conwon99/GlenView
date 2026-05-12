@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const ServicePageAbout = () => {
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -8,11 +10,11 @@ export const ServicePageAbout = () => {
               <div className="text-3xl font-medium box-border caret-transparent blur-0 tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px]">
                 At{" "}
                 <span className="text-3xl box-border caret-transparent leading-[35px] font-figtree md:text-[52px] md:leading-[62px]">
-                  AM|PM Watch Repair{" "}
-                </span>
-                we've been restoring and repairing watches with masterful craftsmanship{" "}
+                  {BUSINESS_NAME}
+                </span>{" "}
+                we deliver professional exterior cleaning with clear pricing and careful technique—
                 <span className="text-neutral-400 text-3xl box-border caret-transparent leading-[35px] md:text-[52px] md:leading-[62px]">
-                  since 2015, with 100+ watches serviced
+                  from roof steam cleaning and render softwashing to gutters, PVC, windows and drives.
                 </span>
               </div>
             </div>
@@ -21,25 +23,27 @@ export const ServicePageAbout = () => {
             <div className="box-border caret-transparent gap-x-[18px] flex blur-0 flex-col max-w-[488px] gap-y-[18px] md:gap-x-5 md:gap-y-5">
               <div className="box-border caret-transparent flex">
                 <div className="text-4xl font-semibold box-border caret-transparent leading-[48px] md:text-5xl md:leading-[60px]">
-                  100+
+                  24h
                 </div>
                 <div className="text-neutral-700 box-border caret-transparent ml-2">
                   <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                    Watches Serviced
+                    Quote response aim
                   </div>
                 </div>
               </div>
               <div className="text-neutral-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                  We've been restoring and repairing watches with masterful craftsmanship since 2015. Whether it's regular servicing, vintage restoration, or complete watch overhauls — we're here to help preserve and enhance your watches.
+                  We plan access, plant and protection with you—ideal for mossy roofs, stained render,
+                  clogged gutters and tired driveways. Book a survey or send photos and we'll outline
+                  the safest approach for your property.
                 </div>
               </div>
             </div>
             <div className="box-border caret-transparent blur-0 h-[300px] overflow-hidden rounded-2xl md:h-[400px] md:w-[500px]">
               <img
-                src="/ampm1.jpeg"
+                src="/portfolio/roofclean1.jpg"
                 sizes="(max-width: 767px) 100vw, 500px"
-                alt="Professional Watch Repair"
+                alt={`${BUSINESS_NAME} — exterior cleaning`}
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
