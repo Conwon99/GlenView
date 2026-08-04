@@ -11,7 +11,7 @@ type Props = {
   intervalMs?: number;
 };
 
-export const BeforeAfterSlideshow = ({ pairs, intervalMs = 4000 }: Props) => {
+export const BeforeAfterSlideshow = ({ pairs, intervalMs = 1000 }: Props) => {
   const [index, setIndex] = useState(0);
   const [showAfter, setShowAfter] = useState(false);
 
@@ -43,7 +43,7 @@ export const BeforeAfterSlideshow = ({ pairs, intervalMs = 4000 }: Props) => {
               src={src}
               alt={`${pair.alt} — ${imgIndex === 1 ? "after" : "before"}`}
               sizes="(max-width: 767px) 100vw, 700px"
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ease-in-out ${
                 isActive ? "opacity-100" : "opacity-0"
               }`}
               aria-hidden={!isActive}
