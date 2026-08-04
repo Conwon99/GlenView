@@ -72,7 +72,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
       { question: "How much does render softwashing cost?", answer: "Cost depends on your property's size, condition and render type. We offer a free, no-obligation quote so you know the exact price before any work begins." },
       { question: "Are you fully insured?", answer: "Yes. GlenView Exterior Cleaning is fully insured, and we're happy to provide details on request." },
       { question: "Do I need to be home during the clean?", answer: "No. As long as we can access the exterior of your property and a water supply, you don't need to be present." },
-      { question: "Do you cover areas outside Bishopbriggs?", answer: "Yes. We're based in Bishopbriggs and cover North Glasgow, East Dunbartonshire, North Lanarkshire, Falkirk and Stirling." },
+      { question: "Do you cover the whole of Scotland?", answer: "Yes, excluding the islands. We're based in Bishopbriggs and cover mainland Scotland." },
       { question: "Do you work with both homeowners and businesses?", answer: "Yes. We carry out render softwashing for homeowners as well as commercial properties, at your home or business." },
       { question: "What other services do you offer?", answer: "Alongside render softwashing, we also provide roof steam cleaning, driveway cleaning, gutter cleaning, PVC white cleaning and window cleaning." },
     ],
