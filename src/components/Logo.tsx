@@ -1,6 +1,6 @@
 export const Logo = () => {
   return (
-    <div className="box-border caret-transparent basis-[0%] grow">
+    <div className="box-border caret-transparent shrink-0">
       <a
         href="/"
         aria-label="home"

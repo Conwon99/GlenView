@@ -15,7 +15,7 @@ function trackNavPhoneClick() {
 
 export const NavActions = () => {
   return (
-    <div className="items-center box-border caret-transparent flex shrink-0 grow-0 basis-auto justify-end justify-self-end gap-3 md:basis-[0%] md:grow md:shrink md:gap-4">
+    <div className="items-center box-border caret-transparent flex shrink-0 grow-0 basis-auto justify-end justify-self-end gap-3 md:gap-4">
       <a
         href={`tel:${PHONE_E164}`}
         onClick={trackNavPhoneClick}
@@ -53,10 +53,10 @@ export const NavActions = () => {
         >
           <div className="relative box-border caret-transparent overflow-hidden">
             <div className="box-border caret-transparent">
-              <div className="relative text-sm font-medium leading-5 z-[2] md:text-base md:leading-6">Message Us</div>
+              <div className="relative text-sm font-medium leading-5 z-[2] whitespace-nowrap md:text-base md:leading-6">Message Us</div>
             </div>
             <div className="absolute box-border caret-transparent w-full">
-              <div className="relative text-sm font-medium leading-5 z-[2] md:text-base md:leading-6">Message Us</div>
+              <div className="relative text-sm font-medium leading-5 z-[2] whitespace-nowrap md:text-base md:leading-6">Message Us</div>
             </div>
           </div>
           <div className="box-border caret-transparent">
