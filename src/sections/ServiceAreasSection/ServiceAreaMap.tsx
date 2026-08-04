@@ -2,17 +2,23 @@ import { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
 
-/** Rough polygon [lat, lng] — North Glasgow through Lanarkshire to Falkirk / Stirling. */
+/** Rough polygon [lat, lng] tracing mainland Scotland, excluding the islands. */
 const SERVICE_AREA_POLYGON: [number, number][] = [
-  [56.20, -4.32],
-  [56.22, -3.58],
-  [55.84, -3.58],
-  [55.84, -4.28],
-  [56.20, -4.32],
+  [54.97, -3.05], // Solway Firth (border, SW)
+  [55.77, -2.03], // Berwick (border/coast, E)
+  [56.46, -2.97], // Dundee (E coast)
+  [57.15, -2.09], // Aberdeen (E coast)
+  [58.44, -3.09], // Wick (NE)
+  [58.62, -4.99], // Cape Wrath (N tip)
+  [57.90, -5.16], // Ullapool (NW coast)
+  [56.82, -5.10], // Fort William (W coast)
+  [55.31, -5.79], // Mull of Kintyre (SW tip)
+  [54.90, -5.02], // Stranraer (SW coast)
+  [54.97, -3.05],
 ];
 
-const MAP_CENTER: [number, number] = [56.02, -3.92];
-const MAP_ZOOM = 9;
+const MAP_CENTER: [number, number] = [56.8, -4.2];
+const MAP_ZOOM = 6;
 
 export function ServiceAreaMap() {
   const containerRef = useRef<HTMLDivElement>(null);
