@@ -15,6 +15,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
   const { whyChoose } = detail;
   const imageUrl = service.imageUrl || "/portfolio/roofclean1.jpg";
   const beforeAfterPairs = getBeforeAfterGallery(serviceSlug);
+  const ctaLabel = serviceSlug === "render-softwashing" ? "GET A FREE QUOTE" : "BOOK NOW";
   const locationLine =
     location?.neighborhoods?.length &&
     location.neighborhoods.length >= 2
@@ -65,7 +66,9 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
                   </div>
                   <div>
                     <div className="font-medium text-black text-[15px] md:text-base">{point.title}</div>
-                    <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">{point.description}</div>
+                    {point.description && (
+                      <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">{point.description}</div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -75,7 +78,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
                 href="/contact/"
                 className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
               >
-                <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
+                <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">{ctaLabel}</span>
                 <span className="box-border caret-transparent">
                   <img src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-8.svg" alt="" className="box-border caret-transparent h-2 w-3 brightness-0 invert" />
                 </span>

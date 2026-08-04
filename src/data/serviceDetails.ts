@@ -54,21 +54,10 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     whyChoose: {
       title: "Why Choose Our Render Softwashing?",
       points: [
-        {
-          title: "Gentle & Effective",
-          description:
-            "Softwashing removes algae, dirt and stains from render without high pressure that can damage surfaces. Ideal for rendered and painted walls.",
-        },
-        {
-          title: "Lasting Results",
-          description:
-            "Our treatments help prevent rapid regrowth so your property stays looking cleaner for longer.",
-        },
-        {
-          title: "Experienced Team",
-          description:
-            "We're used to working on residential and commercial properties across North Glasgow, Lanarkshire, Falkirk and Stirling.",
-        },
+        { title: "15+ Years Experience", description: "" },
+        { title: "5 Star Rated", description: "" },
+        { title: "Scotland Wide Service", description: "" },
+        { title: "Free Quotes Available", description: "" },
       ],
     },
     processSteps: [

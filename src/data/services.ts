@@ -22,7 +22,7 @@ export const services: Service[] = [
     title: "Render Softwashing",
     shortDescription:
       "Render softwashing specialists providing professional render cleaning and softwash render cleaning. Expert stain removal from render surfaces without damage.",
-    imageUrl: "/portfolio/render-softwash.jpg",
+    imageUrl: "/hero/render-softwashing-hero.jpg",
   },
   {
     slug: "driveway-cleaning",
