@@ -52,7 +52,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     heroDescription:
       "Render softwashing specialists: expert stain removal from render surfaces without damage. We bring render cleaning and softwash expertise to your property for a refreshed, clean finish.",
     whyChoose: {
-      title: "Why Choose Our Render Softwashing?",
+      title: "Why Choose Our Render Cleaning & Softwashing?",
       points: [
         { title: "15+ Years Experience", description: "" },
         { title: "5 Star Rated", description: "" },

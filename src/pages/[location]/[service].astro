@@ -40,7 +40,11 @@ if (!location || !service) {
   return Astro.redirect("/404");
 }
 
-const title = `${service.title} ${location.name} | Professional Exterior Cleaning | ${BUSINESS_NAME}`;
+const isRenderSoftwashing = service.slug === "render-softwashing";
+const displayTitle = isRenderSoftwashing ? "Render Cleaning & Softwashing" : service.title;
+const title = isRenderSoftwashing
+  ? `Render Cleaning & Softwashing ${location.name} | Central Scotland - ${BUSINESS_NAME}`
+  : `${service.title} ${location.name} | Professional Exterior Cleaning | ${BUSINESS_NAME}`;
 const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
 const detail = getServiceDetail(service.slug);
@@ -51,7 +55,6 @@ const pageIntro = getLocationServiceIntro(location, service);
 
 const packagesHref = "/services";
 const packagesLabel = "View Our Services";
-const isRenderSoftwashing = service.slug === "render-softwashing";
 const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
 ---
 
@@ -84,7 +87,7 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
             <div class="box-border basis-[0%] grow max-w-[650px] pt-24 md:pt-32">
               <div class="box-border gap-x-4 flex flex-col gap-y-4">
                 <h1 class="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
-                  <div>{service.title}</div>
+                  <div>{displayTitle}</div>
                   <div class="text-white/80">{location.name}</div>
                 </h1>
                 <p class="text-base leading-[26px] md:text-lg font-figtree">

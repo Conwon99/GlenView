@@ -5,9 +5,9 @@ import { BeforeAfterSlideshow } from "./components/BeforeAfterSlideshow";
 import type { Location } from "@/data/locations";
 import { BUSINESS_NAME } from "@/constants/site";
 
-type Props = { serviceSlug: string; location?: Location };
+type Props = { serviceSlug: string; location?: Location; ctaHref?: string };
 
-export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
+export const ExteriorWhyChooseSection = ({ serviceSlug, location, ctaHref = "/contact/" }: Props) => {
   const detail = getServiceDetail(serviceSlug);
   const service = getServiceBySlug(serviceSlug);
   if (!detail || !service) return null;
@@ -75,7 +75,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
             </div>
             <div className="box-border caret-transparent mt-7 md:mt-10">
               <a
-                href="/contact/"
+                href={ctaHref}
                 className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
               >
                 <span className={`relative text-sm z-[2] md:text-base md:leading-6 ${serviceSlug === "render-softwashing" ? "font-bold" : "font-medium"}`}>{ctaLabel}</span>

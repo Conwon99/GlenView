@@ -8,7 +8,7 @@ import { META_AREA_PHRASE } from "@/constants/site";
 
 const DESKTOP_BREAKPOINT = 1024;
 
-export const ServiceAreasSection = () => {
+export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: boolean }) => {
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
@@ -51,12 +51,16 @@ export const ServiceAreasSection = () => {
                           <span className="text-neutral-800 shrink-0" aria-hidden>
                             •
                           </span>
-                          <a
-                            href={`/${loc.slug}/`}
-                            className="hover:text-neutral-800 hover:underline transition-colors"
-                          >
-                            {loc.name}
-                          </a>
+                          {linksEnabled ? (
+                            <a
+                              href={`/${loc.slug}/`}
+                              className="hover:text-neutral-800 hover:underline transition-colors"
+                            >
+                              {loc.name}
+                            </a>
+                          ) : (
+                            <span>{loc.name}</span>
+                          )}
                         </li>
                       ))}
                     </ul>

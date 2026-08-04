@@ -16,9 +16,10 @@ function phoneGtag(pathname: string) {
 
 export type QuoteSectionProps = {
   showTerms?: boolean;
+  redirectTo?: string;
 };
 
-export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
+export const QuoteSection = ({ showTerms = true, redirectTo }: QuoteSectionProps) => {
   return (
     <section
       id="contact"
@@ -65,7 +66,7 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
           </div>
 
           <div className="bg-[#2d2d2d] px-8 py-10 md:flex md:flex-col md:justify-center md:px-10 md:py-12 lg:px-14">
-            <QuoteForm />
+            <QuoteForm redirectTo={redirectTo} />
           </div>
         </div>
 

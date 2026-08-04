@@ -39,6 +39,11 @@ const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
 const defaultCanonical =
   pathWithSlash === "/" ? `${siteUrl}/` : `${siteUrl}${pathWithSlash}`;
 
+const isAdPage = pathWithSlash === "/render-cleaning/";
+const isAdSubPage = pathWithSlash.startsWith("/render-cleaning/") && !isAdPage;
+const showMessageWidget = pathWithSlash !== "/contact/" && !isAdSubPage;
+const messageWidgetHref = isAdPage ? "#contact" : "/contact/";
+
 const {
   title = `${BUSINESS_NAME} - Professional Exterior Cleaning | ${META_AREA_PHRASE}`,
   description = `Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across ${META_AREA_PHRASE}. Professional exterior cleaning for your home or business.`,
@@ -223,9 +228,9 @@ const defaultAreaServed = [
   <body>
     <slot />
     <!-- Mobile message widget - bottom right, visible on small screens only -->
-    {pathWithSlash !== "/contact/" && (
+    {showMessageWidget && (
       <a
-        href="/contact/"
+        href={messageWidgetHref}
         class="fixed bottom-5 right-5 z-50 flex md:hidden items-center gap-2 bg-cta-dark text-white px-4 py-3 rounded-full shadow-lg hover:bg-cta focus:outline-none focus:ring-2 focus:ring-cta-dark focus:ring-offset-2"
         aria-label="Message us / Get a quote"
       >

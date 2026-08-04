@@ -17,7 +17,7 @@ function callGtag(eventName: string, category: string, label: string) {
   }
 }
 
-export const QuoteForm = () => {
+export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -119,7 +119,7 @@ export const QuoteForm = () => {
       });
 
       if (response.ok) {
-        window.location.href = "/thank-you";
+        window.location.href = redirectTo;
       } else {
         try {
           const errorData = await response.json();

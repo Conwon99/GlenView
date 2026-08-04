@@ -53,7 +53,7 @@ export const SoftwashComparisonSection = () => {
           <div className="box-border caret-transparent flex-1 min-w-0">
             <div className="box-border caret-transparent flex justify-start">
               <div className="box-border caret-transparent border border-neutral-200 px-3 py-1 rounded-[1000px] border-solid">
-                <div className="font-medium box-border caret-transparent leading-[22px]">Softwash vs Pressure Washing</div>
+                <div className="font-medium box-border caret-transparent leading-[22px]">Render Cleaning vs Pressure Washing</div>
               </div>
             </div>
             <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] mt-[18px] mb-4 md:text-[52px] md:leading-[62px] font-heading uppercase md:mt-5">

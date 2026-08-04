@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Navbar } from '../sections/Navbar';
+import { AdNavbar } from '../sections/Navbar/AdNavbar';
 import { HeroStats } from '../sections/Hero/components/HeroStats';
 import { ExteriorWhyChooseSection } from '../sections/CoreValuesSection/ExteriorWhyChooseSection';
 import { SoftwashComparisonSection } from '../sections/SoftwashComparisonSection';
@@ -10,7 +10,7 @@ import { ExteriorFAQSection } from '../sections/FAQSection/ExteriorFAQSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
 import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
-import { FooterSection } from '../sections/FooterSection';
+import { AdFooter } from '../sections/FooterSection/AdFooter';
 import SectionCta from '../components/SectionCta.astro';
 import { getServiceBySlug } from '../data/services';
 import { BUSINESS_NAME } from '../constants/site';
@@ -23,7 +23,7 @@ const service = getServiceBySlug('render-softwashing')!;
   description={service.shortDescription}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
-    <Navbar client:load />
+    <AdNavbar client:load />
     <main class="pt-0">
       <section class="relative text-white overflow-hidden min-h-screen">
         <div class="absolute inset-0">
@@ -42,7 +42,7 @@ const service = getServiceBySlug('render-softwashing')!;
                 </p>
               </div>
               <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
-                <a href="/contact/" class="text-white items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black">
+                <a href="#contact" class="text-white items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black">
                   <span class="relative text-sm font-bold z-[2] md:text-base md:leading-6">GET A FREE QUOTE</span>
                   <span class="text-cta-light items-center bg-white box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                     <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
@@ -54,21 +54,21 @@ const service = getServiceBySlug('render-softwashing')!;
           </div>
         </div>
       </section>
-      <ExteriorWhyChooseSection client:load serviceSlug="render-softwashing" />
+      <ExteriorWhyChooseSection client:load serviceSlug="render-softwashing" ctaHref="#contact" />
       <SoftwashComparisonSection client:load />
-      <SectionCta />
+      <SectionCta href="#contact" />
       <RecentJobsSection client:load serviceSlug="render-softwashing" />
-      <SectionCta />
+      <SectionCta href="#contact" />
       <ExteriorProcessSection client:load serviceSlug="render-softwashing" />
-      <SectionCta />
+      <SectionCta href="#contact" />
       <ExteriorFAQSection client:load serviceSlug="render-softwashing" />
-      <SectionCta />
-      <ServiceAreasSection client:load />
-      <SectionCta />
-      <ReviewsSection title="Reviews" />
-      <SectionCta />
-      <QuoteSection client:load showTerms={false} />
-      <FooterSection client:load />
+      <SectionCta href="#contact" />
+      <ServiceAreasSection client:load linksEnabled={false} />
+      <SectionCta href="#contact" />
+      <ReviewsSection title="Reviews" linksEnabled={false} />
+      <SectionCta href="#contact" />
+      <QuoteSection client:load showTerms={false} redirectTo="/render-cleaning/thank-you/" />
+      <AdFooter client:load />
     </main>
   </div>
 </Layout>

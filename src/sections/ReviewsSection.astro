@@ -1,7 +1,14 @@
 ---
 import { StaticReviews } from './ReviewsSection/StaticReviews';
+
+interface Props {
+  title?: string;
+  linksEnabled?: boolean;
+}
+
+const { linksEnabled = true } = Astro.props;
 ---
 
 <section class="reviews-static-wrapper">
-  <StaticReviews client:load />
+  <StaticReviews client:load linksEnabled={linksEnabled} />
 </section>

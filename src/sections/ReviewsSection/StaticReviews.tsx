@@ -51,7 +51,7 @@ function StarRating() {
   );
 }
 
-export function StaticReviews() {
+export function StaticReviews({ linksEnabled = true }: { linksEnabled?: boolean }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: "left" | "right") => {
@@ -64,14 +64,20 @@ export function StaticReviews() {
     <section className="bg-neutral-800 py-[60px] md:py-[100px]" aria-label="Customer reviews">
       <div className="max-w-[1204px] mx-auto px-5 md:px-8">
         <h2 className="text-center md:text-left mb-10 md:mb-12">
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase text-white hover:text-white/90 transition-colors"
-          >
-            What our customers say
-          </a>
+          {linksEnabled ? (
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase text-white hover:text-white/90 transition-colors"
+            >
+              What our customers say
+            </a>
+          ) : (
+            <span className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase text-white">
+              What our customers say
+            </span>
+          )}
         </h2>
         <div className="relative flex items-center gap-2 md:gap-4">
           <button
@@ -108,15 +114,21 @@ export function StaticReviews() {
                 <p className="text-white text-[15px] leading-6 md:text-base flex-grow mb-5">{review.text}</p>
                 <div className="flex items-center justify-between mt-auto">
                   <StarRating />
-                  <a
-                    href={GOOGLE_REVIEWS_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0"
-                    aria-label="View on Google (opens in new tab)"
-                  >
-                    <GoogleLogo />
-                  </a>
+                  {linksEnabled ? (
+                    <a
+                      href={GOOGLE_REVIEWS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0"
+                      aria-label="View on Google (opens in new tab)"
+                    >
+                      <GoogleLogo />
+                    </a>
+                  ) : (
+                    <span className="shrink-0" aria-label="Google review">
+                      <GoogleLogo />
+                    </span>
+                  )}
                 </div>
               </article>
             ))}
