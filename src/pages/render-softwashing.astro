@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { HeroStats } from '../sections/Hero/components/HeroStats';
 import { ExteriorWhyChooseSection } from '../sections/CoreValuesSection/ExteriorWhyChooseSection';
+import { SoftwashComparisonSection } from '../sections/SoftwashComparisonSection';
 import { RecentJobsSection } from '../sections/RecentJobsSection';
 import { ExteriorProcessSection } from '../sections/ProcessSection/ExteriorProcessSection';
 import { ExteriorFAQSection } from '../sections/FAQSection/ExteriorFAQSection';
@@ -54,6 +55,7 @@ const service = getServiceBySlug('render-softwashing')!;
         </div>
       </section>
       <ExteriorWhyChooseSection client:load serviceSlug="render-softwashing" />
+      <SoftwashComparisonSection client:load />
       <RecentJobsSection client:load serviceSlug="render-softwashing" />
       <SectionCta />
       <ExteriorProcessSection client:load serviceSlug="render-softwashing" />

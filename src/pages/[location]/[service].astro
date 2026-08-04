@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../sections/Navbar";
 import { HeroStats } from "../../sections/Hero/components/HeroStats";
 import { ExteriorWhyChooseSection } from "../../sections/CoreValuesSection/ExteriorWhyChooseSection";
+import { SoftwashComparisonSection } from "../../sections/SoftwashComparisonSection";
 import { RecentJobsSection } from "../../sections/RecentJobsSection";
 import { ExteriorProcessSection } from "../../sections/ProcessSection/ExteriorProcessSection";
 import { ExteriorFAQSection } from "../../sections/FAQSection/ExteriorFAQSection";
@@ -127,6 +128,7 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
       {detail && (
         <>
           <ExteriorWhyChooseSection client:load serviceSlug={service.slug} location={location} />
+          {isRenderSoftwashing && <SoftwashComparisonSection client:load />}
           <RecentJobsSection client:load serviceSlug={service.slug} />
           {isRenderSoftwashing && <SectionCta />}
           <ExteriorProcessSection client:load serviceSlug={service.slug} location={location} />
