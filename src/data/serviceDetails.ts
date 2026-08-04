@@ -66,10 +66,15 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
       { title: "Payment & completion", description: "Payment on completion. Your walls will look refreshed and clean." },
     ],
     faqs: [
-      { question: "Will softwashing damage my render?", answer: "No. We use low-pressure softwash methods and appropriate products designed for render and painted surfaces." },
-      { question: "How long until I see results?", answer: "Stains and growth typically start to lift within days. Full results are usually visible within 1–2 weeks." },
+      { question: "How can I book or get a quote?", answer: "Call us on 07862 139959 or fill out the contact form on our website, and we'll get back to you with a free, no-obligation quote." },
+      { question: "Do you offer ongoing maintenance?", answer: "Yes. Alongside a one-off render softwash, we offer a maintenance plan to keep your property looking its best year-round." },
+      { question: "What's the difference between pressure washing and softwashing?", answer: "Pressure washing uses high-pressure water jets, which can chip paint, crack render and blast out mortar. Softwashing is a gentler, low-pressure treatment that's designed for render, roughcast and painted surfaces." },
       { question: "How much does render softwashing cost?", answer: "Cost depends on your property's size, condition and render type. We offer a free, no-obligation quote so you know the exact price before any work begins." },
+      { question: "Are you fully insured?", answer: "Yes. GlenView Exterior Cleaning is fully insured, and we're happy to provide details on request." },
       { question: "Do I need to be home during the clean?", answer: "No. As long as we can access the exterior of your property and a water supply, you don't need to be present." },
+      { question: "Do you cover areas outside Bishopbriggs?", answer: "Yes. We're based in Bishopbriggs and cover North Glasgow, East Dunbartonshire, North Lanarkshire, Falkirk and Stirling." },
+      { question: "Do you work with both homeowners and businesses?", answer: "Yes. We carry out render softwashing for homeowners as well as commercial properties, at your home or business." },
+      { question: "What other services do you offer?", answer: "Alongside render softwashing, we also provide roof steam cleaning, driveway cleaning, gutter cleaning, PVC white cleaning and window cleaning." },
     ],
   },
   "driveway-cleaning": {
