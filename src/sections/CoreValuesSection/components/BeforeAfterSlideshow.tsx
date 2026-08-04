@@ -11,7 +11,7 @@ type Props = {
   intervalMs?: number;
 };
 
-export const BeforeAfterSlideshow = ({ pairs, intervalMs = 1000 }: Props) => {
+export const BeforeAfterSlideshow = ({ pairs, intervalMs = 1500 }: Props) => {
   const [index, setIndex] = useState(0);
   const [showAfter, setShowAfter] = useState(false);
 
