@@ -12,7 +12,7 @@ export const ExteriorProcessSection = ({ serviceSlug, location }: Props) => {
   const defaultImage = "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop";
 
   return (
-    <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
+    <section className={`box-border caret-transparent py-[60px] md:py-[100px] ${serviceSlug === "render-softwashing" ? "bg-neutral-100" : "bg-white"}`}>
       <div className="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
         <div className="items-start box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:gap-x-10 md:flex-row md:gap-y-10">
           <div className="static items-start box-border caret-transparent gap-x-4 flex flex-col max-w-none gap-y-4 top-[100px] md:sticky md:max-w-[332px]">
