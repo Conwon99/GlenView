@@ -1,5 +1,7 @@
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
+import { getBeforeAfterGallery } from "@/data/beforeAfterGalleries";
+import { BeforeAfterSlideshow } from "./components/BeforeAfterSlideshow";
 import type { Location } from "@/data/locations";
 import { BUSINESS_NAME } from "@/constants/site";
 
@@ -12,6 +14,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
 
   const { whyChoose } = detail;
   const imageUrl = service.imageUrl || "/portfolio/roofclean1.jpg";
+  const beforeAfterPairs = getBeforeAfterGallery(serviceSlug);
   const locationLine =
     location?.neighborhoods?.length &&
     location.neighborhoods.length >= 2
@@ -26,12 +29,16 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
         <div className="box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:gap-x-10 md:flex-row md:gap-y-10">
           <div className="box-border caret-transparent gap-y-4 flex flex-col w-full max-w-full md:max-w-none md:w-auto md:max-w-[700px]">
             <div className="box-border caret-transparent blur-0 h-[300px] w-full overflow-hidden rounded-2xl md:h-[600px] md:w-full">
-              <img
-                src={imageUrl}
-                sizes="(max-width: 767px) 100vw, 700px"
-                alt={`${BUSINESS_NAME} — ${service.title}`}
-                className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
-              />
+              {beforeAfterPairs ? (
+                <BeforeAfterSlideshow pairs={beforeAfterPairs} />
+              ) : (
+                <img
+                  src={imageUrl}
+                  sizes="(max-width: 767px) 100vw, 700px"
+                  alt={`${BUSINESS_NAME} — ${service.title}`}
+                  className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
+                />
+              )}
             </div>
           </div>
           <div className="box-border caret-transparent blur-0 basis-[0%] grow max-w-none md:max-w-[544px]">
