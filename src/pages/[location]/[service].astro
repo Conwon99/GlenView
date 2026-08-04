@@ -10,6 +10,7 @@ import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
 import ReviewsSection from "../../sections/ReviewsSection.astro";
 import { QuoteSection } from "../../sections/QuoteSection";
 import { FooterSection } from "../../sections/FooterSection";
+import SectionCta from "../../components/SectionCta.astro";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { getLocationBySlug } from "../../data/locations";
 import { getServiceBySlug } from "../../data/services";
@@ -127,13 +128,18 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
         <>
           <ExteriorWhyChooseSection client:load serviceSlug={service.slug} location={location} />
           <RecentJobsSection client:load serviceSlug={service.slug} />
+          {isRenderSoftwashing && <SectionCta />}
           <ExteriorProcessSection client:load serviceSlug={service.slug} location={location} />
+          {isRenderSoftwashing && <SectionCta />}
           <ExteriorFAQSection client:load serviceSlug={service.slug} location={location} />
+          {isRenderSoftwashing && <SectionCta />}
         </>
       )}
 
       <ServiceAreasSection client:load />
+      {isRenderSoftwashing && <SectionCta />}
       <ReviewsSection title="Reviews" />
+      {isRenderSoftwashing && <SectionCta />}
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

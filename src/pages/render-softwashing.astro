@@ -10,6 +10,7 @@ import { ServiceAreasSection } from '../sections/ServiceAreasSection';
 import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
+import SectionCta from '../components/SectionCta.astro';
 import { getServiceBySlug } from '../data/services';
 import { BUSINESS_NAME } from '../constants/site';
 
@@ -54,10 +55,15 @@ const service = getServiceBySlug('render-softwashing')!;
       </section>
       <ExteriorWhyChooseSection client:load serviceSlug="render-softwashing" />
       <RecentJobsSection client:load serviceSlug="render-softwashing" />
+      <SectionCta />
       <ExteriorProcessSection client:load serviceSlug="render-softwashing" />
+      <SectionCta />
       <ExteriorFAQSection client:load serviceSlug="render-softwashing" />
+      <SectionCta />
       <ServiceAreasSection client:load />
+      <SectionCta />
       <ReviewsSection title="Reviews" />
+      <SectionCta />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>
