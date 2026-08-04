@@ -129,6 +129,7 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
         <>
           <ExteriorWhyChooseSection client:load serviceSlug={service.slug} location={location} />
           {isRenderSoftwashing && <SoftwashComparisonSection client:load />}
+          {isRenderSoftwashing && <SectionCta />}
           <RecentJobsSection client:load serviceSlug={service.slug} />
           {isRenderSoftwashing && <SectionCta />}
           <ExteriorProcessSection client:load serviceSlug={service.slug} location={location} />
