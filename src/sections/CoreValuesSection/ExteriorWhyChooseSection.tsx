@@ -59,7 +59,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
             <div className="text-neutral-700 box-border caret-transparent space-y-4">
               {whyChoose.points.map((point, i) => (
                 <div key={i} className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
-                  <div className="text-black items-center bg-neutral-200 box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5">
+                  <div className={`items-center box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5 ${serviceSlug === "render-softwashing" ? "text-white bg-blue-600" : "text-black bg-neutral-200"}`}>
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
