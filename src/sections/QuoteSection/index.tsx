@@ -22,7 +22,7 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
   return (
     <section
       id="contact"
-      className="relative bg-neutral-200 pt-[100px] pb-[60px] md:pt-[130px] md:pb-[100px]"
+      className="relative bg-neutral-200 pt-28 pb-[60px] md:pt-36 md:pb-[100px]"
     >
       <div className="relative mx-auto max-w-[1204px] px-5 md:px-8">
         <div className="overflow-hidden rounded-2xl shadow-2xl md:grid md:grid-cols-2 md:min-h-[520px] md:rounded-3xl">
@@ -34,7 +34,7 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
             <div className="absolute inset-0 bg-black/45" />
             <div className="relative z-10 flex h-full flex-col justify-center px-8 py-12 md:px-10 md:py-14 lg:px-14">
               <h2 className="max-w-md font-heading text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-[2.65rem] lg:leading-[1.12]">
-                Get in touch for your free, no-obligation quote
+                Get a Free Quote
               </h2>
               <a
                 href={`tel:${PHONE_E164}`}
@@ -43,7 +43,7 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
                     phoneGtag(window.location.pathname);
                   }
                 }}
-                className="mt-8 inline-flex w-fit items-center gap-3 rounded-full bg-black/65 px-6 py-4 text-xl font-semibold text-white backdrop-blur-md ring-1 ring-white/15 transition hover:bg-black/80 md:text-2xl md:px-7 md:py-[1.125rem]"
+                className="mt-8 inline-flex w-fit items-center gap-3 rounded-full bg-cta px-6 py-4 text-xl font-semibold text-white ring-1 ring-white/15 transition hover:bg-cta-dark md:text-2xl md:px-7 md:py-[1.125rem]"
               >
                 <svg
                   className="h-6 w-6 shrink-0 md:h-8 md:w-8"

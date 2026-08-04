@@ -223,15 +223,17 @@ const defaultAreaServed = [
   <body>
     <slot />
     <!-- Mobile message widget - bottom right, visible on small screens only -->
-    <a
-      href="/contact/"
-      class="fixed bottom-5 right-5 z-50 flex md:hidden items-center gap-2 bg-cta-dark text-white px-4 py-3 rounded-full shadow-lg hover:bg-cta focus:outline-none focus:ring-2 focus:ring-cta-dark focus:ring-offset-2"
-      aria-label="Message us / Get a quote"
-    >
-      <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.864 9.864 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-      <span class="font-medium text-sm">Message</span>
-    </a>
+    {pathWithSlash !== "/contact/" && (
+      <a
+        href="/contact/"
+        class="fixed bottom-5 right-5 z-50 flex md:hidden items-center gap-2 bg-cta-dark text-white px-4 py-3 rounded-full shadow-lg hover:bg-cta focus:outline-none focus:ring-2 focus:ring-cta-dark focus:ring-offset-2"
+        aria-label="Message us / Get a quote"
+      >
+        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.864 9.864 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+        <span class="font-medium text-sm">Message</span>
+      </a>
+    )}
   </body>
 </html>
