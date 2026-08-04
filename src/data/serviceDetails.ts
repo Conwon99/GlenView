@@ -68,6 +68,8 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     faqs: [
       { question: "Will softwashing damage my render?", answer: "No. We use low-pressure softwash methods and appropriate products designed for render and painted surfaces." },
       { question: "How long until I see results?", answer: "Stains and growth typically start to lift within days. Full results are usually visible within 1–2 weeks." },
+      { question: "How much does render softwashing cost?", answer: "Cost depends on your property's size, condition and render type. We offer a free, no-obligation quote so you know the exact price before any work begins." },
+      { question: "Do I need to be home during the clean?", answer: "No. As long as we can access the exterior of your property and a water supply, you don't need to be present." },
     ],
   },
   "driveway-cleaning": {
