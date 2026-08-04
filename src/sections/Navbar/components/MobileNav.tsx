@@ -19,7 +19,7 @@ export const MobileNav = () => {
         <a
           href={`tel:${PHONE_E164}`}
           aria-label={`Call us on ${PHONE_DISPLAY}`}
-          className="text-neutral-900 p-3 rounded-full hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-dark focus-visible:ring-offset-2"
+          className="text-white bg-cta-light p-3 rounded-full hover:bg-cta focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-dark focus-visible:ring-offset-2"
           onClick={() => {
             if (typeof window !== "undefined" && (window as any).gtag) {
               (window as any).gtag("event", "phone_click_nav", {

@@ -92,10 +92,10 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
               <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
                 <a
                   href="/contact/"
-                  class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark"
+                  class={`items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black ${isRenderSoftwashing ? "text-white" : "text-black"}`}
                 >
                   <span class={`relative text-sm z-[2] md:text-base md:leading-6 ${isRenderSoftwashing ? "font-bold" : "font-medium"}`}>{bookCtaLabel}</span>
-                  <span class={`items-center box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%] ${isRenderSoftwashing ? "text-blue-600 bg-white" : "text-white bg-blue-600"}`}>
+                  <span class={`items-center box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%] ${isRenderSoftwashing ? "text-cta-light bg-white" : "text-white bg-blue-600"}`}>
                     {isRenderSoftwashing ? (
                       <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                     ) : (
