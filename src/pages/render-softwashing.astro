@@ -30,18 +30,18 @@ const service = getServiceBySlug('render-softwashing')!;
           <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url("${service.imageUrl}");`} />
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-        <div class="relative mx-auto flex min-h-screen w-full max-w-[1204px] flex-col justify-end px-5 pb-8 pt-32 md:px-8 md:pb-12 md:pt-28 supports-[min-height:100dvh]:min-h-[100dvh]">
+        <div class="relative mx-auto flex min-h-screen w-full max-w-[1204px] flex-col justify-end px-5 pb-8 pt-24 md:px-8 md:pb-10 md:pt-24 supports-[min-height:100dvh]:min-h-[100dvh]">
           <div class="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
-            <div class="box-border basis-[0%] grow max-w-[650px] pt-24 md:pt-32">
-              <div class="box-border gap-x-4 flex flex-col gap-y-4">
-                <h1 class="text-[36px] font-bold box-border tracking-[-1px] leading-[42px] md:text-6xl md:leading-[68px] font-heading">
+            <div class="box-border basis-[0%] grow max-w-[650px]">
+              <div class="box-border gap-x-3 flex flex-col gap-y-3">
+                <h1 class="text-[28px] font-bold box-border tracking-[-1px] leading-[34px] md:text-5xl md:leading-[54px] font-heading">
                   <div>Professional Render Cleaning &amp; Softwashing <span class="text-blue-300">in Scotland</span></div>
                 </h1>
-                <p class="text-base leading-[26px] md:text-lg font-figtree">
+                <p class="text-sm leading-6 md:text-base font-figtree">
                   {service.shortDescription}
                 </p>
               </div>
-              <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
+              <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-4 md:gap-x-6 md:gap-y-6 md:mt-5">
                 <a href="/contact/" class="text-white items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black">
                   <span class="relative text-sm font-bold z-[2] md:text-base md:leading-6">GET A FREE QUOTE</span>
                   <span class="text-cta-light items-center bg-white box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
