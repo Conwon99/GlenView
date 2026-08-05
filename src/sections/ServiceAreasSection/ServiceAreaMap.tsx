@@ -50,6 +50,7 @@ export function ServiceAreaMap() {
       }).addTo(map);
 
       map.fitBounds(polygon.getBounds(), { padding: [24, 24] });
+      if (map.getZoom() < 6) map.setZoom(6);
       mapRef.current = map;
     });
 
@@ -68,7 +69,7 @@ export function ServiceAreaMap() {
     <div className="relative z-0 isolate">
       <div
         ref={containerRef}
-        className="w-full h-full min-h-[280px] lg:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100 [&_.leaflet-control]:!z-[100] [&_.leaflet-pane]:!z-[1]"
+        className="w-full h-full min-h-[420px] lg:min-h-[520px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100 [&_.leaflet-control]:!z-[100] [&_.leaflet-pane]:!z-[1]"
         aria-label={mapLabel}
       />
     </div>

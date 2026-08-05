@@ -68,7 +68,7 @@ export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: bo
                 ))}
               </div>
             </details>
-            <div className="box-border w-full relative rounded-xl overflow-hidden aspect-[4/3] min-h-[280px] lg:min-h-[320px]">
+            <div className="box-border w-full relative rounded-xl overflow-hidden aspect-[3/5] min-h-[420px] lg:min-h-[520px]">
               <ServiceAreaMap />
             </div>
           </div>
