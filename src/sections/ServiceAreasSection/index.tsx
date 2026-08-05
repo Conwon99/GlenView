@@ -4,8 +4,6 @@ import {
   LOCATION_REGION_ORDER,
   locationsInRegion,
 } from "@/data/locations";
-import { META_AREA_PHRASE } from "@/constants/site";
-
 const DESKTOP_BREAKPOINT = 1024;
 
 export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: boolean }) => {
@@ -32,7 +30,7 @@ export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: bo
             Areas We Cover
           </h2>
           <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[640px]">
-            We cover {META_AREA_PHRASE} with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
+            We cover the whole of mainland Scotland, excluding the islands, with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <details ref={detailsRef} open className="box-border group">
