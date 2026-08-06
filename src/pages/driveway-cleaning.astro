@@ -27,10 +27,10 @@ const service = getServiceBySlug('driveway-cleaning')!;
           <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url("${service.imageUrl}");`} />
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
-        <div class="relative mx-auto flex min-h-screen w-full max-w-[1204px] flex-col justify-end px-5 pb-8 pt-32 md:px-8 md:pb-12 md:pt-28 supports-[min-height:100dvh]:min-h-[100dvh]">
+        <div class="relative mx-auto flex min-h-screen w-full max-w-[1204px] flex-col justify-end px-5 pb-8 pt-24 md:px-8 md:pb-10 md:pt-24 supports-[min-height:100dvh]:min-h-[100dvh]">
           <div class="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
-            <div class="box-border basis-[0%] grow max-w-[650px] pt-24 md:pt-32">
-              <div class="box-border gap-x-4 flex flex-col gap-y-4">
+            <div class="box-border basis-[0%] grow max-w-[650px]">
+              <div class="box-border gap-x-3 flex flex-col gap-y-3">
                 <h1 class="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
                   <div>{service.title}</div>
                 </h1>
@@ -38,7 +38,7 @@ const service = getServiceBySlug('driveway-cleaning')!;
                   {service.shortDescription}
                 </p>
               </div>
-              <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
+              <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-4 md:gap-x-6 md:gap-y-6 md:mt-5">
                 <a href="/contact/" class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark">
                   <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
                   <span class="text-white items-center bg-blue-600 box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
