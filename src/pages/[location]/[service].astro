@@ -41,9 +41,9 @@ if (!location || !service) {
 }
 
 const isRenderSoftwashing = service.slug === "render-softwashing";
-const displayTitle = isRenderSoftwashing ? "Render Cleaning & Softwashing" : service.title;
+const displayTitle = isRenderSoftwashing ? "Render & Roughcast Cleaning" : service.title;
 const title = isRenderSoftwashing
-  ? `Render Cleaning & Softwashing ${location.name} | Central Scotland - ${BUSINESS_NAME}`
+  ? `Render & Roughcast Cleaning ${location.name} | Central Scotland - ${BUSINESS_NAME}`
   : `${service.title} ${location.name} | Professional Exterior Cleaning | ${BUSINESS_NAME}`;
 const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 

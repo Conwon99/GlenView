@@ -16,7 +16,7 @@ export type ServiceDetailContent = {
 export const serviceDetails: Record<string, ServiceDetailContent> = {
   "roof-steam-cleaning": {
     heroDescription:
-      "Professional roof steam cleaning with safe moss and algae removal from roof tiles. Effective, environmentally friendly treatment that protects your roof and improves curb appeal across Central Scotland.",
+      "Professional roof steam cleaning and roof soft washing with safe moss and algae removal from roof tiles. Effective, environmentally friendly treatment that protects your roof and improves curb appeal across Central Scotland.",
     whyChoose: {
       title: "Why Choose Our Roof Steam Cleaning?",
       points: [
@@ -45,14 +45,15 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     faqs: [
       { question: "How often should I have my roof cleaned?", answer: "Every 2–3 years is typical for moss and algae, depending on exposure and tree cover. We can advise after an inspection." },
       { question: "Is roof steam cleaning safe for all roof types?", answer: "Yes. We use low-pressure steam and appropriate treatments suitable for tiles, slates and most roof surfaces." },
+      { question: "What's the difference between roof steam cleaning and roof soft washing?", answer: "They're closely related — both are low-pressure alternatives to jet washing. We use steam and soft-wash treatments together depending on the roof type, so you get the same damage-free result either way." },
       { question: "Do you treat the gutters too?", answer: "We can clear and clean gutters as part of the service or as a separate job. Ask for a quote." },
     ],
   },
   "render-softwashing": {
     heroDescription:
-      "Render softwashing specialists: expert stain removal from render surfaces without damage. We bring render cleaning and softwash expertise to your property for a refreshed, clean finish.",
+      "Render, roughcast and pebbledash softwashing specialists: expert stain removal from render surfaces without damage. We bring render cleaning and softwash expertise to your property for a refreshed, clean finish.",
     whyChoose: {
-      title: "Why Choose GlenView's Render Cleaning?",
+      title: "Why Choose GlenView's Render & Roughcast Cleaning?",
       points: [
         { title: "15+ Years Experience", description: "" },
         { title: "5 Star Rated", description: "" },
@@ -68,7 +69,8 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     faqs: [
       { question: "How can I book or get a quote?", answer: "Call us on 07862 139959 or fill out the contact form on our website, and we'll get back to you with a free, no-obligation quote." },
       { question: "Do you offer ongoing maintenance?", answer: "Yes. Alongside a one-off render softwash, we offer a maintenance plan to keep your property looking its best year-round." },
-      { question: "What's the difference between pressure washing and softwashing?", answer: "Pressure washing uses high-pressure water jets, which can chip paint, crack render and blast out mortar. Softwashing is a gentler, low-pressure treatment that's designed for render, roughcast and painted surfaces." },
+      { question: "What's the difference between pressure washing and softwashing?", answer: "Pressure washing uses high-pressure water jets, which can chip paint, crack render and blast out mortar. Softwashing is a gentler, low-pressure treatment that's designed for render, roughcast, pebbledash and painted surfaces." },
+      { question: "Do you clean roughcast and pebbledash as well as smooth render?", answer: "Yes — roughcast, pebbledash and smooth render all respond well to softwashing, though dwell time varies by coating age and texture." },
       { question: "How much does render softwashing cost?", answer: "Cost depends on your property's size, condition and render type. We offer a free, no-obligation quote so you know the exact price before any work begins." },
       { question: "Are you fully insured?", answer: "Yes. GlenView Exterior Cleaning is fully insured, and we're happy to provide details on request." },
       { question: "Do I need to be home during the clean?", answer: "No. As long as we can access the exterior of your property and a water supply, you don't need to be present." },
@@ -112,7 +114,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
   },
   "gutter-cleaning": {
     heroDescription:
-      "Gutter cleaning and gutter maintenance to keep drainage clear and protect your property. We clear leaves, debris and blockages and can inspect gutters for damage.",
+      "Gutter cleaning and gutter maintenance to keep drainage clear and protect your property. We clear leaves, debris and blockages, can inspect gutters for damage, and clean fascias and soffits while we're up there.",
     whyChoose: {
       title: "Why Choose Our Gutter Cleaning?",
       points: [
@@ -141,6 +143,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
     faqs: [
       { question: "How often should gutters be cleaned?", answer: "At least once a year, and more often if you have overhanging trees or heavy leaf fall." },
       { question: "Do you clean downpipes too?", answer: "We can clear downpipes as part of the service if required. Ask when booking." },
+      { question: "Can you clean fascias and soffits at the same time?", answer: "Yes — since we're already working at gutter height, we can clean fascias and soffits in the same visit. Ask for a combined quote." },
     ],
   },
   "pvc-white-cleaning": {
