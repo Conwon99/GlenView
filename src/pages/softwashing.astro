@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../sections/Navbar';
+import { HeroStats } from '../sections/Hero/components/HeroStats';
+import { SoftwashComparisonSection } from '../sections/SoftwashComparisonSection';
+import { ServiceAreasSection } from '../sections/ServiceAreasSection';
+import ReviewsSection from '../sections/ReviewsSection.astro';
+import { QuoteSection } from '../sections/QuoteSection';
+import { FooterSection } from '../sections/FooterSection';
+import SectionCta from '../components/SectionCta.astro';
+import { getServiceBySlug } from '../data/services';
+import { BUSINESS_NAME } from '../constants/site';
+
+const linkedSlugs = ['render-softwashing', 'roof-steam-cleaning', 'driveway-cleaning', 'gutter-cleaning', 'patio-cleaning'];
+const linkedServices = linkedSlugs.map((slug) => getServiceBySlug(slug)!).filter(Boolean);
+
+const pageTitle = `Soft Washing Services | Central Scotland - ${BUSINESS_NAME}`;
+const pageDescription =
+  "Soft washing services across Central Scotland: a safe, low-pressure alternative to jet washing for render, roofs, driveways, gutters and patios. See which service is right for your property.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <section class="relative text-white overflow-hidden min-h-screen">
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url("/hero/render-softwashing-hero.jpg");`} />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div class="relative mx-auto flex min-h-screen w-full max-w-[1204px] flex-col justify-end px-5 pb-8 pt-24 md:px-8 md:pb-10 md:pt-24 supports-[min-height:100dvh]:min-h-[100dvh]">
+          <div class="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
+            <div class="box-border basis-[0%] grow max-w-[650px]">
+              <div class="box-border gap-x-3 flex flex-col gap-y-3">
+                <h1 class="text-[32px] font-bold box-border tracking-[-1px] leading-[38px] md:text-6xl md:leading-[68px] font-heading">
+                  <div>Soft Washing <span class="text-blue-300">Services</span></div>
+                </h1>
+                <p class="text-sm leading-6 md:text-base font-figtree">
+                  {pageDescription}
+                </p>
+              </div>
+              <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-4 md:gap-x-6 md:gap-y-6 md:mt-5">
+                <a href="/contact/" class="text-white items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black">
+                  <span class="relative text-sm font-bold z-[2] md:text-base md:leading-6">GET A FREE QUOTE</span>
+                  <span class="text-cta-light items-center bg-white box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                    <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <HeroStats client:load />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white box-border py-[60px] md:py-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <h2 class="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase mb-6">
+            What Is Soft Washing?
+          </h2>
+          <div class="text-[15px] leading-6 text-neutral-700 md:text-base max-w-3xl space-y-4">
+            <p>
+              Soft washing is a low-pressure cleaning method that uses specialist, biodegradable treatments instead of
+              high-pressure water jets. It's the safest way to remove algae, moss, lichen and staining from delicate
+              exterior surfaces — render, roughcast, pebbledash, roof tiles, driveways, patios and gutters — without
+              the cracking, chipping or water-ingress risk that comes with jet washing.
+            </p>
+            <p>
+              Because soft washing treats the growth at the root rather than just blasting away what's visible on the
+              surface, results also last longer. We use it across most of the exterior cleaning services we offer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <SoftwashComparisonSection client:load />
+      <SectionCta href="/contact/" />
+
+      <section class="bg-neutral-100 box-border py-[60px] md:py-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <h2 class="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase mb-8">
+            What We Soft Wash
+          </h2>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {linkedServices.map((service) => (
+              <a
+                href={`/${service.slug}/`}
+                class="group block rounded-2xl overflow-hidden border border-neutral-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="h-40 overflow-hidden">
+                  <img
+                    src={service.imageUrl}
+                    alt={service.title}
+                    class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="font-heading uppercase font-bold text-black text-base md:text-lg">{service.title}</div>
+                  <div class="mt-2 text-[15px] text-neutral-700 leading-6">Learn more &rarr;</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white box-border py-[60px] md:py-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <div class="box-border inline-block border border-neutral-200 px-3 py-1 rounded-[1000px] border-solid w-fit mb-8">
+            <span class="font-medium leading-[22px]">FAQ</span>
+          </div>
+          <h2 class="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase mb-8">
+            Soft Washing FAQs
+          </h2>
+          <div class="box-border flex flex-col gap-y-0 border border-neutral-200 rounded-xl overflow-hidden divide-y divide-neutral-200">
+            <details class="group p-5 md:p-6">
+              <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-heading uppercase text-base md:text-lg font-bold text-black">
+                Is soft washing the same as pressure washing?
+                <span class="shrink-0 text-neutral-500 group-open:rotate-180 transition-transform">&#9660;</span>
+              </summary>
+              <p class="mt-4 text-[15px] leading-6 text-neutral-700 md:text-base">
+                No. Pressure washing uses high-pressure water jets that can chip paint, crack render and blast out
+                mortar. Soft washing uses low pressure with specialist treatments, so it's safe for delicate surfaces.
+              </p>
+            </details>
+            <details class="group p-5 md:p-6">
+              <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-heading uppercase text-base md:text-lg font-bold text-black">
+                What surfaces can be soft washed?
+                <span class="shrink-0 text-neutral-500 group-open:rotate-180 transition-transform">&#9660;</span>
+              </summary>
+              <p class="mt-4 text-[15px] leading-6 text-neutral-700 md:text-base">
+                Render, roughcast, pebbledash, roof tiles and slates, driveways, patios, gutters, fascias and soffits
+                can all be soft washed. See the services above for the specific treatment for your surface.
+              </p>
+            </details>
+            <details class="group p-5 md:p-6">
+              <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-heading uppercase text-base md:text-lg font-bold text-black">
+                How much does soft washing cost?
+                <span class="shrink-0 text-neutral-500 group-open:rotate-180 transition-transform">&#9660;</span>
+              </summary>
+              <p class="mt-4 text-[15px] leading-6 text-neutral-700 md:text-base">
+                Cost depends on the surface, property size and condition. Visit the specific service page for your
+                surface, or get in touch for a free, no-obligation quote.
+              </p>
+            </details>
+            <details class="group p-5 md:p-6">
+              <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-heading uppercase text-base md:text-lg font-bold text-black">
+                Do you offer soft washing near me?
+                <span class="shrink-0 text-neutral-500 group-open:rotate-180 transition-transform">&#9660;</span>
+              </summary>
+              <p class="mt-4 text-[15px] leading-6 text-neutral-700 md:text-base">
+                Yes, we cover North Glasgow, East Dunbartonshire, Lanarkshire, Falkirk and Stirling. Get in touch for
+                a free quote.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <ServiceAreasSection client:load />
+      <SectionCta href="/contact/" />
+      <ReviewsSection title="Reviews" />
+      <SectionCta href="/contact/" />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

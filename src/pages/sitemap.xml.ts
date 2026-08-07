@@ -19,6 +19,7 @@ const staticPages: string[] = [
   "window-cleaning",
   "moss-removal",
   "patio-cleaning",
+  "softwashing",
 ];
 
 function buildLocationPaths(): string[] {
