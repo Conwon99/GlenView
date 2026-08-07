@@ -209,6 +209,75 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
       { question: "How often should windows be cleaned?", answer: "Many customers choose every 4–8 weeks. We can suggest a frequency based on your property and preference." },
     ],
   },
+  "moss-removal": {
+    heroDescription:
+      "Specialist moss and algae removal for roofs, patios and driveways across Central Scotland. We clear moss safely from slate, tile and concrete without damaging the surface, and can apply a treatment to slow regrowth.",
+    whyChoose: {
+      title: "Why Choose GlenView's Moss & Algae Removal?",
+      points: [
+        {
+          title: "Damage-Free Methods",
+          description:
+            "We use low-pressure removal suited to slate, concrete and clay tiles, avoiding the aggressive pressure-washing that can crack or dislodge them.",
+        },
+        {
+          title: "Treatment Included",
+          description:
+            "We can apply a moss and algae treatment after removal to slow regrowth, so the job lasts longer than a one-off clear.",
+        },
+        {
+          title: "Roofs, Patios & Driveways",
+          description:
+            "Moss and algae don't just build up on roofs — we clear it from patios and driveways too, where it makes surfaces slippery.",
+        },
+      ],
+    },
+    processSteps: [
+      { title: "Book & get a quote", description: "Contact us for a free inspection and quote — we'll tell you how urgent the moss or algae build-up is." },
+      { title: "We come to you", description: "We remove moss and algae by hand and low-pressure methods, then apply treatment where needed." },
+      { title: "Payment & completion", description: "Payment on completion. We'll leave the surface clear and protected against regrowth." },
+    ],
+    faqs: [
+      { question: "How do I know if my roof needs moss removal?", answer: "Look for visible green or grey clumps along ridge lines and in roof valleys, granules collecting in your gutters, or damp patches appearing on ceilings after rain." },
+      { question: "Will moss removal damage my roof tiles?", answer: "No — we use low-pressure methods suited to slate, concrete and clay tiles, and avoid aggressive pressure-washing that can crack or dislodge tiles." },
+      { question: "Do you remove algae as well as moss?", answer: "Yes — algae causes the green staining you often see on roofs, patios and driveways, and we treat both together." },
+      { question: "Do you offer moss removal near me?", answer: "Yes, we cover North Glasgow, East Dunbartonshire, Lanarkshire, Falkirk and Stirling. Get in touch for a free quote." },
+    ],
+  },
+  "patio-cleaning": {
+    heroDescription:
+      "Patio cleaning and pressure washing for slabs, monoblock and decking. We lift algae, moss and grime from patios across Central Scotland, leaving outdoor spaces safe and ready to use.",
+    whyChoose: {
+      title: "Why Choose GlenView's Patio Cleaning?",
+      points: [
+        {
+          title: "Safer Underfoot",
+          description:
+            "Algae and moss on patios and monoblock get slippery fast — regular cleaning removes the hazard as well as the mess.",
+        },
+        {
+          title: "All Surface Types",
+          description:
+            "We clean slabs, monoblock, decking and natural stone patios with the right pressure and method for each.",
+        },
+        {
+          title: "Ready for Use",
+          description:
+            "A clean patio means your outdoor space is ready for the next barbecue or get-together, not just presentable.",
+        },
+      ],
+    },
+    processSteps: [
+      { title: "Book & get a quote", description: "Contact us with your patio size and surface type for a free quote." },
+      { title: "We come to you", description: "We bring our pressure washing equipment and clean the full patio area, including joints and edges." },
+      { title: "Payment & completion", description: "Pay on completion. Your patio will look clean and be safer to walk on." },
+    ],
+    faqs: [
+      { question: "Can you clean monoblock patios?", answer: "Yes — we clean monoblock, slabs, natural stone and decking, adjusting pressure to suit each surface." },
+      { question: "Will pressure washing damage patio joints?", answer: "No, we use appropriate pressure and technique so jointing sand and pointing aren't stripped out." },
+      { question: "Do you offer patio cleaning near me?", answer: "Yes, we cover North Glasgow, East Dunbartonshire, Lanarkshire, Falkirk and Stirling. Get in touch for a free quote." },
+    ],
+  },
 };
 
 export function getServiceDetail(serviceSlug: string): ServiceDetailContent | undefined {

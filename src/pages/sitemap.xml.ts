@@ -17,6 +17,8 @@ const staticPages: string[] = [
   "gutter-cleaning",
   "pvc-white-cleaning",
   "window-cleaning",
+  "moss-removal",
+  "patio-cleaning",
 ];
 
 function buildLocationPaths(): string[] {
