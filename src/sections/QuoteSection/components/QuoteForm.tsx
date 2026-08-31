@@ -17,7 +17,7 @@ function callGtag(eventName: string, category: string, label: string) {
   }
 }
 
-export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }) => {
+export const QuoteForm = ({ redirectTo = "/thank-you", source }: { redirectTo?: string; source?: string }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,6 +105,9 @@ export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }
       }
       formDataToSend.append("description", formData.description);
       formDataToSend.append("website", `${SITE_URL}/`);
+      if (source) {
+        formDataToSend.append("source", source);
+      }
 
       if (imageFile) {
         formDataToSend.append("image", imageFile);
@@ -144,6 +147,7 @@ export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }
       encType="multipart/form-data"
       className="w-full flex flex-col gap-5"
     >
+      {source && <input type="hidden" name="source" value={source} />}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-white">
