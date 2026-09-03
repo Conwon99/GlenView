@@ -17,7 +17,13 @@ function callGtag(eventName: string, category: string, label: string) {
   }
 }
 
-export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }) => {
+export const QuoteForm = ({
+  redirectTo = "/thank-you",
+  formEndpoint = FORMSPREE_ENDPOINT,
+}: {
+  redirectTo?: string;
+  formEndpoint?: string;
+}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -110,7 +116,7 @@ export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }
         formDataToSend.append("image", imageFile);
       }
 
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(formEndpoint, {
         method: "POST",
         body: formDataToSend,
         headers: {
@@ -139,7 +145,7 @@ export const QuoteForm = ({ redirectTo = "/thank-you" }: { redirectTo?: string }
   return (
     <form
       onSubmit={handleSubmit}
-      action={FORMSPREE_ENDPOINT}
+      action={formEndpoint}
       method="POST"
       encType="multipart/form-data"
       className="w-full flex flex-col gap-5"

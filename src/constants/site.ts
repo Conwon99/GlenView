@@ -26,7 +26,10 @@ export const META_AREA_PHRASE =
   "North Glasgow, East Dunbartonshire, North Lanarkshire, Falkirk and Stirling";
 
 /** Formspree form URL (quote / contact submissions). */
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeaqzjok";
+export const FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgzazqg";
+
+/** Formspree form URL for the render cleaning ad landing page. */
+export const AD_FORMSPREE_ENDPOINT = "https://formspree.io/f/xeaqzjok";
 
 /** Google Business Profile link (reviews / profile). */
 export const GOOGLE_REVIEWS_URL = "https://share.google/WHM6HVMqy1SvwnkkX";

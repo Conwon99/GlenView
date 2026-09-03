@@ -13,7 +13,7 @@ import { QuoteSection } from '../sections/QuoteSection';
 import { AdFooter } from '../sections/FooterSection/AdFooter';
 import SectionCta from '../components/SectionCta.astro';
 import { getServiceBySlug } from '../data/services';
-import { BUSINESS_NAME } from '../constants/site';
+import { BUSINESS_NAME, AD_FORMSPREE_ENDPOINT } from '../constants/site';
 
 const service = getServiceBySlug('render-softwashing')!;
 ---
@@ -67,7 +67,7 @@ const service = getServiceBySlug('render-softwashing')!;
       <SectionCta href="#contact" />
       <ReviewsSection title="Reviews" linksEnabled={false} />
       <SectionCta href="#contact" />
-      <QuoteSection client:load showTerms={false} redirectTo="/render-cleaning/thank-you/" />
+      <QuoteSection client:load showTerms={false} redirectTo="/render-cleaning/thank-you/" formEndpoint={AD_FORMSPREE_ENDPOINT} />
       <AdFooter client:load />
     </main>
   </div>
