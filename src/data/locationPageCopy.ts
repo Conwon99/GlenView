@@ -6,6 +6,7 @@
 import type { Location, LocationRegionId } from "./locations";
 import { LOCATION_REGION_ORDER } from "./locations";
 import { hashKey, pickVariant } from "../utils/contentVariants";
+import { BUSINESS_NAME, META_AREA_PHRASE } from "../constants/site";
 
 function hashSlug(s: string, salt = ""): number {
   return hashKey(s + salt);
@@ -317,7 +318,7 @@ export function getLocationHeroParagraphs(location: Location): string[] {
         ),
         location,
       );
-  return [climate, nb];
+  return [nb, climate];
 }
 
 const HERO_TAGLINES: Record<LocationRegionId, string[]> = {
@@ -352,12 +353,40 @@ export function getLocationHeroTagline(location: Location): string {
   return ph(pick(HERO_TAGLINES[location.regionId], location.slug, "hero-tagline"), location);
 }
 
-/** “Why choose us” block */
+function nearbyClause(location: Location): string {
+  return location.neighborhoods && location.neighborhoods.length > 0
+    ? " and nearby areas"
+    : "";
+}
+
+/** Intro sentence templates for the "Why Choose {BUSINESS_NAME}?" block — coverage + full service list. */
+const WHY_CHOOSE_INTRO_TEMPLATES: ((location: Location) => string)[] = [
+  (l) =>
+    `At ${BUSINESS_NAME} we deliver professional exterior cleaning across ${META_AREA_PHRASE}—including ${l.name}${nearbyClause(l)}. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning, we bring safe, effective service to your property.`,
+  (l) =>
+    `${BUSINESS_NAME} provides professional exterior cleaning throughout ${META_AREA_PHRASE}, including ${l.name}${nearbyClause(l)}. Our services cover roof steam cleaning, moss removal, render softwashing, driveway, gutter, PVC and window cleaning—all carried out at your property.`,
+  (l) =>
+    `Homeowners and businesses across ${META_AREA_PHRASE} choose ${BUSINESS_NAME} for professional exterior cleaning, including in ${l.name}${nearbyClause(l)}. We handle roof steam cleaning, moss removal, render softwashing, driveway, gutter, PVC and window cleaning.`,
+  (l) =>
+    `${BUSINESS_NAME} brings professional exterior cleaning to ${l.name}${nearbyClause(l)} and the rest of ${META_AREA_PHRASE}. That covers roof steam cleaning, moss removal, render softwashing, driveway, gutter, PVC and window cleaning.`,
+  (l) =>
+    `Serving ${l.name}${nearbyClause(l)} as part of our coverage across ${META_AREA_PHRASE}, ${BUSINESS_NAME} delivers professional exterior cleaning—from roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning.`,
+];
+
+/** Closing assurance line — insured, quality, customer satisfaction. */
+const WHY_CHOOSE_ASSURANCE_LINES = [
+  "Fully insured and with a focus on quality and customer satisfaction on every job.",
+  "Every job is fully insured, with quality and customer satisfaction as the priority.",
+  "We're fully insured, and quality plus customer satisfaction come as standard on every visit.",
+  "Fully insured throughout, with a genuine focus on getting the quality and the customer experience right.",
+  "Insurance is in place on every job, alongside a consistent focus on quality and customer satisfaction.",
+];
+
+/** "Why choose us" block — coverage/services intro, then an insured/quality assurance line. */
 export function getLocationChooseUsParagraphs(location: Location): string[] {
-  return [
-    ph(pick(TRANSPORT_LINES[location.regionId], location.slug, "choose-trans"), location),
-    ph(pick(HOME_STYLE_LINES[location.regionId], location.slug, "choose-home"), location),
-  ];
+  const intro = pickVariant(WHY_CHOOSE_INTRO_TEMPLATES, location.slug, "choose-intro")(location);
+  const assurance = pickVariant(WHY_CHOOSE_ASSURANCE_LINES, location.slug, "choose-assurance");
+  return [intro, assurance];
 }
 
 /** Services section intros */
