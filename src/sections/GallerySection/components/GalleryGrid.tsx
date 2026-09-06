@@ -1,7 +1,12 @@
 import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
 
-export const GalleryGrid = () => {
-  const images = [
+export type GalleryGridProps = {
+  /** Rotates which image leads the grid (1-based), so the layout isn't pixel-identical on every page. */
+  leadIndex?: number;
+};
+
+export const GalleryGrid = ({ leadIndex = 1 }: GalleryGridProps) => {
+  const allImages = [
     {
       src: "/portfolio/gal1.jpg",
       alt: `Roof and exterior cleaning — ${META_AREA_PHRASE}`,
@@ -27,6 +32,9 @@ export const GalleryGrid = () => {
       alt: `PVC and window cleaning — ${BUSINESS_NAME} gallery`,
     },
   ];
+
+  const offset = ((leadIndex - 1) % allImages.length + allImages.length) % allImages.length;
+  const images = [...allImages.slice(offset), ...allImages.slice(0, offset)];
 
   return (
     <div className="box-border caret-transparent gap-x-[18px] grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-[18px] mt-10 md:gap-x-5 md:grid-cols-[1fr_1fr_1fr] md:gap-y-5 md:mt-14">

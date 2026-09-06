@@ -1,6 +1,14 @@
 import { ProcessSteps } from "@/sections/ProcessSection/components/ProcessSteps";
+import type { Location } from "@/data/locations";
+import { getLocationProcessIntro } from "@/data/locationPageCopy";
 
-export const ProcessSection = () => {
+export type ProcessSectionProps = {
+  location?: Location;
+};
+
+export const ProcessSection = ({ location }: ProcessSectionProps) => {
+  const intro = location ? getLocationProcessIntro(location) : null;
+
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
       <div className="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
@@ -14,6 +22,11 @@ export const ProcessSection = () => {
             <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
               How It Works
             </h2>
+            {intro && (
+              <p className="text-[15px] text-neutral-700 leading-6 md:text-base">
+                {intro}
+              </p>
+            )}
           </div>
           <ProcessSteps />
         </div>

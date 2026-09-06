@@ -1,12 +1,14 @@
 import type { Location } from "@/data/locations";
-import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
+import { BUSINESS_NAME } from "@/constants/site";
+import { getLocationChooseUsParagraphs } from "@/data/locationPageCopy";
 
 export type LocationServiceIntroProps = {
   location: Location;
 };
 
 export const LocationServiceIntro = ({ location }: LocationServiceIntroProps) => {
-  const { name, neighborhoods = [] } = location;
+  const { name } = location;
+  const [chooseUsIntro, chooseUsDetail] = getLocationChooseUsParagraphs(location);
 
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -38,7 +40,10 @@ export const LocationServiceIntro = ({ location }: LocationServiceIntroProps) =>
             </div>
             <div className="text-neutral-700 box-border caret-transparent">
               <p className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                At {BUSINESS_NAME} we deliver professional exterior cleaning across {META_AREA_PHRASE}—including {name}{neighborhoods.length ? ` and nearby areas` : ""}. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning, we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
+                {chooseUsIntro}
+              </p>
+              <p className="text-[15px] box-border caret-transparent leading-6 md:text-base mt-3">
+                {chooseUsDetail}
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-3 mt-5">
                 <div className="flex items-center gap-2">

@@ -1,6 +1,20 @@
 import { GalleryGrid } from "@/sections/GallerySection/components/GalleryGrid";
+import type { Location } from "@/data/locations";
+import {
+  getLocationGalleryHeading,
+  getLocationGalleryImageIndex,
+} from "@/data/locationPageCopy";
 
-export const GallerySection = () => {
+export type GallerySectionProps = {
+  location?: Location;
+};
+
+export const GallerySection = ({ location }: GallerySectionProps) => {
+  const heading = location
+    ? getLocationGalleryHeading(location)
+    : "See Our Work - Exterior Cleaning Results";
+  const leadIndex = location ? getLocationGalleryImageIndex(location.slug) : 1;
+
   return (
     <section className="box-border caret-transparent py-[60px] md:py-[100px]">
       <div className="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
@@ -15,11 +29,11 @@ export const GallerySection = () => {
             </div>
             <div className="box-border caret-transparent blur-0 max-w-[680px] text-center mx-auto">
               <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
-                See Our Work - Exterior Cleaning Results
+                {heading}
               </h2>
             </div>
           </div>
-          <GalleryGrid />
+          <GalleryGrid leadIndex={leadIndex} />
             <div className="box-border caret-transparent mt-8 text-center">
             <div className="box-border caret-transparent flex justify-center">
               <a

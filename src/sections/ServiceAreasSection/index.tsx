@@ -4,10 +4,30 @@ import {
   LOCATION_REGION_ORDER,
   locationsInRegion,
 } from "@/data/locations";
+import type { Location } from "@/data/locations";
+import type { Service } from "@/data/services";
+import { getLocationServiceAreasIntro } from "@/data/locationPageCopy";
 const DESKTOP_BREAKPOINT = 1024;
 
-export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: boolean }) => {
+export type ServiceAreasSectionProps = {
+  linksEnabled?: boolean;
+  location?: Location;
+  service?: Service;
+};
+
+export const ServiceAreasSection = ({
+  linksEnabled = true,
+  location,
+  service,
+}: ServiceAreasSectionProps) => {
   const detailsRef = useRef<HTMLDetailsElement>(null);
+  const intro = location
+    ? getLocationServiceAreasIntro(location)
+    : "We cover the whole of mainland Scotland, excluding the islands, with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.";
+  const introWithService =
+    location && service
+      ? `Need ${service.title.toLowerCase()} outside ${location.name}? ${intro}`
+      : intro;
 
   useEffect(() => {
     const mql = window.matchMedia(`(min-width: ${DESKTOP_BREAKPOINT}px)`);
@@ -30,7 +50,7 @@ export const ServiceAreasSection = ({ linksEnabled = true }: { linksEnabled?: bo
             Areas We Cover
           </h2>
           <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[640px]">
-            We cover the whole of mainland Scotland, excluding the islands, with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
+            {introWithService}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <details ref={detailsRef} open className="box-border group">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
+import { getSharedFaqs, getSecondLocationFaq } from "@/data/serviceDetailVariants";
 import type { Location } from "@/data/locations";
 
 type Props = { serviceSlug: string; location?: Location };
@@ -28,9 +29,12 @@ export const ExteriorFAQSection = ({ serviceSlug, location }: Props) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   if (!detail || !service) return null;
-  const { faqs } = detail;
+  const faqs = getSharedFaqs(serviceSlug, location);
   const locationFaq = location ? getLocationFaq(service.title, location) : null;
-  const allFaqs = locationFaq ? [locationFaq, ...faqs] : faqs;
+  const secondLocationFaq = location ? getSecondLocationFaq(location, serviceSlug) : null;
+  const allFaqs = locationFaq
+    ? [locationFaq, ...(secondLocationFaq ? [secondLocationFaq] : []), ...faqs]
+    : faqs;
 
   return (
     <section className="bg-white box-border py-[60px] md:py-[100px]">

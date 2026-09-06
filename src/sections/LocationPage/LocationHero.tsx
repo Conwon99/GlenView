@@ -1,5 +1,9 @@
 import type { Location } from "@/data/locations";
 import { HeroStats } from "@/sections/Hero/components/HeroStats";
+import {
+  getLocationHeroParagraphs,
+  getLocationHeroTagline,
+} from "@/data/locationPageCopy";
 
 const ICON_ARROW =
   "https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg";
@@ -11,8 +15,9 @@ export type LocationHeroProps = {
 };
 
 export const LocationHero = ({ location }: LocationHeroProps) => {
-  const { name, neighborhoods = [] } = location;
-  const areas = neighborhoods.length ? ` in ${name} and nearby areas like ${neighborhoods.slice(0, 3).join(", ")}` : ` in ${name}`;
+  const { name } = location;
+  const tagline = getLocationHeroTagline(location);
+  const [heroParagraph] = getLocationHeroParagraphs(location);
 
   return (
     <section className="relative text-white overflow-hidden min-h-screen">
@@ -30,6 +35,9 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
         <div className="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
           <div className="box-border basis-[0%] grow max-w-[650px]">
             <div className="box-border gap-x-4 flex flex-col gap-y-4">
+              <span className="inline-block w-fit border border-white/30 px-3 py-1 rounded-[1000px] text-xs font-medium tracking-wide md:text-sm">
+                {tagline}
+              </span>
               <h1 className="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
                 <div>Exterior</div>
                 <div>Cleaning</div>
@@ -38,7 +46,7 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
                 </div>
               </h1>
               <p className="text-base leading-[26px] md:text-lg font-figtree">
-                Professional exterior cleaning{areas}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. We bring the service to your property—get a free quote.
+                {heroParagraph}
               </p>
             </div>
             <div className="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">

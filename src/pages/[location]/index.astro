@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../sections/Navbar";
 import { getLocationBySlug } from "../../data/locations";
+import { getLocationMetaDescription } from "../../data/locationPageCopy";
 import {
   LocationHero,
   LocationServiceIntro,
@@ -32,7 +33,7 @@ if (!location) {
 }
 
 const title = `Exterior Cleaning ${location.name} | Roof, Driveway & Gutter Cleaning | ${BUSINESS_NAME}`;
-const description = `Professional exterior cleaning in ${location.name} and nearby. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Get a free quote.`;
+const description = getLocationMetaDescription(location);
 
 const locationSchema =
   location.geo && location.addressLocality
@@ -67,9 +68,9 @@ const locationSchema =
       <LocationHero client:load location={location} />
       <LocationServiceIntro client:load location={location} />
       <LocationServicesSection client:load location={location} />
-      <GallerySection client:load />
-      <ProcessSection client:load />
-      <ServiceAreasSection client:load />
+      <GallerySection client:load location={location} />
+      <ProcessSection client:load location={location} />
+      <ServiceAreasSection client:load location={location} />
       <ReviewsSection />
       <LocationContentSection client:load location={location} />
       <QuoteSection client:load showTerms={false} />

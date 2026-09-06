@@ -1,6 +1,7 @@
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
 import { getBeforeAfterGallery } from "@/data/beforeAfterGalleries";
+import { getWhyChoosePoints, getWhyChooseLocationLine } from "@/data/serviceDetailVariants";
 import { BeforeAfterSlideshow } from "./components/BeforeAfterSlideshow";
 import type { Location } from "@/data/locations";
 import { BUSINESS_NAME } from "@/constants/site";
@@ -13,16 +14,11 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location, ctaHref = "/co
   if (!detail || !service) return null;
 
   const { whyChoose } = detail;
+  const points = getWhyChoosePoints(serviceSlug, location);
   const imageUrl = service.imageUrl || "/portfolio/roofclean1.jpg";
   const beforeAfterPairs = getBeforeAfterGallery(serviceSlug);
   const ctaLabel = serviceSlug === "render-softwashing" ? "GET A FREE QUOTE" : "BOOK NOW";
-  const locationLine =
-    location?.neighborhoods?.length &&
-    location.neighborhoods.length >= 2
-      ? `Serving ${location.name}, ${location.neighborhoods[0]}, ${location.neighborhoods[1]} and the surrounding area.`
-      : location
-        ? `Serving ${location.name} and the surrounding area.`
-        : null;
+  const locationLine = location ? getWhyChooseLocationLine(location, serviceSlug) : null;
 
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -57,7 +53,7 @@ export const ExteriorWhyChooseSection = ({ serviceSlug, location, ctaHref = "/co
               )}
             </div>
             <div className="text-neutral-700 box-border caret-transparent space-y-4">
-              {whyChoose.points.map((point, i) => (
+              {points.map((point, i) => (
                 <div key={i} className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
                   <div className={`items-center box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5 ${serviceSlug === "render-softwashing" ? "text-white bg-cta-light" : "text-black bg-neutral-200"}`}>
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

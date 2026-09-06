@@ -1,4 +1,5 @@
 import { getServiceDetail } from "@/data/serviceDetails";
+import { getProcessSteps } from "@/data/serviceDetailVariants";
 import { ProcessCard } from "./components/ProcessCard";
 import type { Location } from "@/data/locations";
 
@@ -8,7 +9,7 @@ export const ExteriorProcessSection = ({ serviceSlug, location }: Props) => {
   const detail = getServiceDetail(serviceSlug);
   if (!detail) return null;
 
-  const { processSteps } = detail;
+  const processSteps = getProcessSteps(serviceSlug, location);
   const defaultImage = "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop";
 
   return (

@@ -17,6 +17,7 @@ import { getLocationBySlug } from "../../data/locations";
 import { getServiceBySlug } from "../../data/services";
 import { getServiceDetail } from "../../data/serviceDetails";
 import { getLocationServiceIntro } from "../../data/locationServiceIntros";
+import { getHeroTrailingClause } from "../../data/serviceDetailVariants";
 import { LocationServicePageIntro } from "../../sections/LocationPage";
 import { BUSINESS_NAME } from "../../constants/site";
 
@@ -45,20 +46,31 @@ const displayTitle = isRenderSoftwashing ? "Render & Roughcast Cleaning" : servi
 const title = isRenderSoftwashing
   ? `Render & Roughcast Cleaning ${location.name} | Central Scotland - ${BUSINESS_NAME}`
   : `${service.title} ${location.name} | Professional Exterior Cleaning | ${BUSINESS_NAME}`;
-const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
-
 const detail = getServiceDetail(service.slug);
 const baseHero = detail?.heroDescription ?? service.shortDescription;
-const heroDescription = `${baseHero} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
+const heroTrailingClause = getHeroTrailingClause(location, service.slug);
+const description = `${service.shortDescription} ${heroTrailingClause}`;
+const heroDescription = `${baseHero} ${heroTrailingClause}`;
 
 const pageIntro = getLocationServiceIntro(location, service);
 
 const packagesHref = "/services";
 const packagesLabel = "View Our Services";
 const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
+
+const locationSchema =
+  location.geo && location.addressLocality
+    ? {
+        name: `${location.name} – ${service.title}`,
+        slug: `${location.slug}/${service.slug}`,
+        addressLocality: location.addressLocality,
+        latitude: location.geo.latitude,
+        longitude: location.geo.longitude,
+      }
+    : undefined;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} locationSchema={locationSchema}>
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
@@ -142,7 +154,7 @@ const bookCtaLabel = isRenderSoftwashing ? "GET A FREE QUOTE" : "BOOK NOW";
         </>
       )}
 
-      <ServiceAreasSection client:load />
+      <ServiceAreasSection client:load location={location} service={service} />
       {isRenderSoftwashing && <SectionCta />}
       <ReviewsSection title="Reviews" />
       {isRenderSoftwashing && <SectionCta />}
