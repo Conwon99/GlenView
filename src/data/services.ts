@@ -57,7 +57,7 @@ export const services: Service[] = [
     title: "Moss & Algae Removal",
     shortDescription:
       "Specialist moss and algae removal for roofs, patios and driveways across Central Scotland. We clear moss safely from slate, tile and concrete without damaging the surface, and can apply a treatment to slow regrowth.",
-    imageUrl: "/portfolio/roofclean1.jpg",
+    imageUrl: "/portfolio/gal1.jpg",
   },
   {
     slug: "patio-cleaning",
