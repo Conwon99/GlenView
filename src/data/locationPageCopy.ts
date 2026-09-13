@@ -463,7 +463,7 @@ export function getLocationLocalKnowledgeParagraphs(location: Location): string[
 }
 
 export function getLocationGalleryImageIndex(locationSlug: string): number {
-  return (hashSlug(locationSlug, "gal-img") % 6) + 1;
+  return (hashSlug(locationSlug, "gal-img") % 3) + 1;
 }
 
 const GALLERY_HEADINGS = [
