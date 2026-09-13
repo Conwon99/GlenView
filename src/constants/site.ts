@@ -31,9 +31,6 @@ export const FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgzazqg";
 /** Formspree form URL for the render cleaning ad landing page. */
 export const AD_FORMSPREE_ENDPOINT = "https://formspree.io/f/xeaqzjok";
 
-/** Google Business Profile link (reviews / profile). */
-export const GOOGLE_REVIEWS_URL = "https://share.google/WHM6HVMqy1SvwnkkX";
-
 /** Facebook profile (footer + schema sameAs). */
 export const FACEBOOK_PROFILE_URL =
   "https://www.facebook.com/profile.php?id=61589064227371&rdid=wMuBW9u13Y8FS2eK";

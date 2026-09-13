@@ -4,7 +4,6 @@ import { Navbar } from '../sections/Navbar';
 import { HeroStats } from '../sections/Hero/components/HeroStats';
 import { SoftwashComparisonSection } from '../sections/SoftwashComparisonSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
-import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 import SectionCta from '../components/SectionCta.astro';
@@ -159,7 +158,6 @@ const pageDescription =
 
       <ServiceAreasSection client:load />
       <SectionCta href="/contact/" />
-      <ReviewsSection title="Reviews" />
       <SectionCta href="/contact/" />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />

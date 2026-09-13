@@ -8,7 +8,6 @@ import { GallerySection } from '../sections/GallerySection';
 import { ProcessSection } from '../sections/ProcessSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
 import { HomeFAQ } from '../sections/FAQSection/HomeFAQ';
-import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
@@ -52,7 +51,6 @@ import { BUSINESS_NAME, META_AREA_PHRASE } from '../constants/site';
       <ProcessSection client:load />
       <HomeFAQ client:load />
       <ServiceAreasSection client:load />
-      <ReviewsSection />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

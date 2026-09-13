@@ -13,7 +13,6 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { GallerySection } from "../../sections/GallerySection";
 import { ProcessSection } from "../../sections/ProcessSection";
 import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
-import ReviewsSection from "../../sections/ReviewsSection.astro";
 import { QuoteSection } from "../../sections/QuoteSection";
 import { FooterSection } from "../../sections/FooterSection";
 import { BUSINESS_NAME } from "../../constants/site";
@@ -71,7 +70,6 @@ const locationSchema =
       <GallerySection client:load location={location} />
       <ProcessSection client:load location={location} />
       <ServiceAreasSection client:load location={location} />
-      <ReviewsSection />
       <LocationContentSection client:load location={location} />
       <QuoteSection client:load showTerms={false} />
       <FooterSection

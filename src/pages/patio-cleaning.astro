@@ -6,7 +6,6 @@ import { ExteriorWhyChooseSection } from '../sections/CoreValuesSection/Exterior
 import { ExteriorProcessSection } from '../sections/ProcessSection/ExteriorProcessSection';
 import { ExteriorFAQSection } from '../sections/FAQSection/ExteriorFAQSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
-import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 import { getServiceBySlug } from '../data/services';
@@ -62,7 +61,6 @@ const service = getServiceBySlug('patio-cleaning')!;
       <ExteriorProcessSection client:load serviceSlug="patio-cleaning" />
       <ExteriorFAQSection client:load serviceSlug="patio-cleaning" />
       <ServiceAreasSection client:load />
-      <ReviewsSection title="Reviews" />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

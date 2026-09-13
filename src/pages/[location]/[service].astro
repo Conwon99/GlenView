@@ -8,7 +8,6 @@ import { RecentJobsSection } from "../../sections/RecentJobsSection";
 import { ExteriorProcessSection } from "../../sections/ProcessSection/ExteriorProcessSection";
 import { ExteriorFAQSection } from "../../sections/FAQSection/ExteriorFAQSection";
 import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
-import ReviewsSection from "../../sections/ReviewsSection.astro";
 import { QuoteSection } from "../../sections/QuoteSection";
 import { FooterSection } from "../../sections/FooterSection";
 import SectionCta from "../../components/SectionCta.astro";
@@ -156,7 +155,6 @@ const locationSchema =
 
       <ServiceAreasSection client:load location={location} service={service} />
       {isRenderSoftwashing && <SectionCta />}
-      <ReviewsSection title="Reviews" />
       {isRenderSoftwashing && <SectionCta />}
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
