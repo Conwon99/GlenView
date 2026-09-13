@@ -13,11 +13,11 @@ export const GalleryGrid = ({ leadIndex = 1 }: GalleryGridProps) => {
     },
     {
       src: "/portfolio/gal2.jpg",
-      alt: `Professional roof and property cleaning — ${BUSINESS_NAME}`,
+      alt: `Render cleaning and exterior wall washing — ${BUSINESS_NAME}`,
     },
     {
       src: "/portfolio/gal3.jpg",
-      alt: "Render softwashing and exterior cleaning results",
+      alt: "Render softwashing and exterior wall cleaning results",
     },
     {
       src: "/portfolio/gal4.jpg",
