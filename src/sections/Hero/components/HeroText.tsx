@@ -5,7 +5,7 @@ export const HeroText = () => {
     <div className="box-border caret-transparent basis-[0%] grow max-w-[650px]">
       <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4">
         <h1 className="text-[44px] font-bold box-border caret-transparent blur-0 leading-[52px] md:text-7xl md:leading-[80px] font-heading normal-case">
-          <div>Roof Cleaning <span className="text-blue-300">Central Scotland</span></div>
+          <div>Exterior Cleaning <span className="text-blue-300">Glasgow</span></div>
         </h1>
         <div className="text-base box-border caret-transparent blur-0 leading-[26px] md:text-lg font-figtree">
           Expert exterior cleaning: roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Safe, professional service across {META_AREA_PHRASE}.
