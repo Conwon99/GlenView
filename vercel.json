@@ -3,8 +3,203 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.glenviewexteriorcleaning.co.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.glenviewexteriorcleaning.co.uk"
+        }
+      ],
       "destination": "https://glenviewexteriorcleaning.co.uk/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/croy/:path*",
+      "destination": "/cumbernauld/",
+      "permanent": true
+    },
+    {
+      "source": "/dullatur/:path*",
+      "destination": "/cumbernauld/",
+      "permanent": true
+    },
+    {
+      "source": "/banton/:path*",
+      "destination": "/kilsyth/",
+      "permanent": true
+    },
+    {
+      "source": "/haggs/:path*",
+      "destination": "/banknock/",
+      "permanent": true
+    },
+    {
+      "source": "/camelon/:path*",
+      "destination": "/falkirk/",
+      "permanent": true
+    },
+    {
+      "source": "/stenhousemuir/:path*",
+      "destination": "/larbert/",
+      "permanent": true
+    },
+    {
+      "source": "/bishopbriggs/:service((?:roof-steam-cleaning|render-softwashing|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/bishopbriggs/",
+      "permanent": true
+    },
+    {
+      "source": "/robroyston/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/robroyston/",
+      "permanent": true
+    },
+    {
+      "source": "/stepps/:service((?:roof-steam-cleaning|driveway-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/stepps/",
+      "permanent": true
+    },
+    {
+      "source": "/lenzie/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/lenzie/",
+      "permanent": true
+    },
+    {
+      "source": "/kirkintilloch/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/kirkintilloch/",
+      "permanent": true
+    },
+    {
+      "source": "/auchinloch/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/auchinloch/",
+      "permanent": true
+    },
+    {
+      "source": "/chryston/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/chryston/",
+      "permanent": true
+    },
+    {
+      "source": "/moodiesburn/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal)/?)",
+      "destination": "/moodiesburn/",
+      "permanent": true
+    },
+    {
+      "source": "/muirhead/:service((?:roof-steam-cleaning|render-softwashing|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/muirhead/",
+      "permanent": true
+    },
+    {
+      "source": "/gartcosh/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/gartcosh/",
+      "permanent": true
+    },
+    {
+      "source": "/cumbernauld/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/cumbernauld/",
+      "permanent": true
+    },
+    {
+      "source": "/twechar/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/twechar/",
+      "permanent": true
+    },
+    {
+      "source": "/kilsyth/:service((?:render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|patio-cleaning)/?)",
+      "destination": "/kilsyth/",
+      "permanent": true
+    },
+    {
+      "source": "/queenzieburn/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/queenzieburn/",
+      "permanent": true
+    },
+    {
+      "source": "/coatbridge/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/coatbridge/",
+      "permanent": true
+    },
+    {
+      "source": "/airdrie/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/airdrie/",
+      "permanent": true
+    },
+    {
+      "source": "/glenboig/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/glenboig/",
+      "permanent": true
+    },
+    {
+      "source": "/plains/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/plains/",
+      "permanent": true
+    },
+    {
+      "source": "/caldercruix/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/caldercruix/",
+      "permanent": true
+    },
+    {
+      "source": "/chapelhall/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/chapelhall/",
+      "permanent": true
+    },
+    {
+      "source": "/salsburgh/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/salsburgh/",
+      "permanent": true
+    },
+    {
+      "source": "/denny/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/denny/",
+      "permanent": true
+    },
+    {
+      "source": "/bonnybridge/:service((?:roof-steam-cleaning|render-softwashing|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/bonnybridge/",
+      "permanent": true
+    },
+    {
+      "source": "/banknock/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/banknock/",
+      "permanent": true
+    },
+    {
+      "source": "/falkirk/:service((?:render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/falkirk/",
+      "permanent": true
+    },
+    {
+      "source": "/larbert/:service((?:render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/larbert/",
+      "permanent": true
+    },
+    {
+      "source": "/grangemouth/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/grangemouth/",
+      "permanent": true
+    },
+    {
+      "source": "/polmont/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/polmont/",
+      "permanent": true
+    },
+    {
+      "source": "/linlithgow/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/linlithgow/",
+      "permanent": true
+    },
+    {
+      "source": "/stirling/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|gutter-cleaning|pvc-white-cleaning|window-cleaning|patio-cleaning)/?)",
+      "destination": "/stirling/",
+      "permanent": true
+    },
+    {
+      "source": "/bridge-of-allan/:service((?:roof-steam-cleaning|render-softwashing|driveway-cleaning|pvc-white-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/bridge-of-allan/",
+      "permanent": true
+    },
+    {
+      "source": "/dunblane/:service((?:render-softwashing|driveway-cleaning|gutter-cleaning|window-cleaning|moss-removal|patio-cleaning)/?)",
+      "destination": "/dunblane/",
       "permanent": true
     }
   ]

@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { locationSlugs } from "../data/locations";
-import { serviceSlugs } from "../data/services";
+import { locationServicePaths } from "../data/locationServicePages";
 import { SITE_URL } from "../constants/site";
 
 const siteUrl = SITE_URL;
@@ -24,11 +24,9 @@ const staticPages: string[] = [
 
 function buildLocationPaths(): string[] {
   const paths: string[] = ["locations"];
-  for (const loc of locationSlugs) {
-    paths.push(loc);
-    for (const svc of serviceSlugs) {
-      paths.push(`${loc}/${svc}`);
-    }
+  paths.push(...locationSlugs);
+  for (const { location, service } of locationServicePaths) {
+    paths.push(`${location}/${service}`);
   }
   return paths;
 }
