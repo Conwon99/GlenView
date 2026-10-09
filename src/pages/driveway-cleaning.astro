@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { HeroStats } from '../sections/Hero/components/HeroStats';
 import { ExteriorWhyChooseSection } from '../sections/CoreValuesSection/ExteriorWhyChooseSection';
+import { DrivewayBenefitsSection } from '../sections/DrivewayBenefitsSection';
 import { ExteriorProcessSection } from '../sections/ProcessSection/ExteriorProcessSection';
 import { ExteriorFAQSection } from '../sections/FAQSection/ExteriorFAQSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
@@ -58,6 +59,7 @@ const service = getServiceBySlug('driveway-cleaning')!;
         </div>
       </section>
       <ExteriorWhyChooseSection client:load serviceSlug="driveway-cleaning" />
+      <DrivewayBenefitsSection client:load />
       <ExteriorProcessSection client:load serviceSlug="driveway-cleaning" />
       <ExteriorFAQSection client:load serviceSlug="driveway-cleaning" />
       <ServiceAreasSection client:load />
