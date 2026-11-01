@@ -1,5 +1,6 @@
 import type { Location } from "@/data/locations";
 import { services } from "@/data/services";
+import { hasLocationServicePage } from "@/data/locationServicePages";
 import { getLocationServiceIntro } from "@/data/locationServiceIntros";
 import { ServiceCard } from "@/sections/ServicePageServices/components/ServiceCard";
 
@@ -32,7 +33,11 @@ export const LocationServicesSection = ({
               return (
                 <ServiceCard
                   key={service.slug}
-                  href={`/${location.slug}/${service.slug}`}
+                  href={
+                    hasLocationServicePage(location.slug, service.slug)
+                      ? `/${location.slug}/${service.slug}/`
+                      : `/${service.slug}/`
+                  }
                   imageUrl={service.imageUrl}
                   imageSizes="(max-width: 767px) 100vw, 740px"
                   title={service.title}

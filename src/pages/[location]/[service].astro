@@ -21,15 +21,9 @@ import { LocationServicePageIntro } from "../../sections/LocationPage";
 import { BUSINESS_NAME } from "../../constants/site";
 
 export async function getStaticPaths() {
-  const { locationSlugs } = await import("../../data/locations");
-  const { serviceSlugs } = await import("../../data/services");
-  const paths: { params: { location: string; service: string } }[] = [];
-  for (const location of locationSlugs) {
-    for (const service of serviceSlugs) {
-      paths.push({ params: { location, service } });
-    }
-  }
-  return paths;
+  // Only build location+service pages that are on the allowlist (others 301 to the hub).
+  const { locationServicePagePaths } = await import("../../data/locationServicePages");
+  return locationServicePagePaths.map((params) => ({ params }));
 }
 
 const { location: locationSlug, service: serviceSlug } = Astro.params;
