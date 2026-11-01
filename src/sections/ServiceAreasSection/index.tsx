@@ -10,13 +10,11 @@ import { getLocationServiceAreasIntro } from "@/data/locationPageCopy";
 const DESKTOP_BREAKPOINT = 1024;
 
 export type ServiceAreasSectionProps = {
-  linksEnabled?: boolean;
   location?: Location;
   service?: Service;
 };
 
 export const ServiceAreasSection = ({
-  linksEnabled = true,
   location,
   service,
 }: ServiceAreasSectionProps) => {
@@ -69,16 +67,7 @@ export const ServiceAreasSection = ({
                           <span className="text-neutral-800 shrink-0" aria-hidden>
                             •
                           </span>
-                          {linksEnabled ? (
-                            <a
-                              href={`/${loc.slug}/`}
-                              className="hover:text-neutral-800 hover:underline transition-colors"
-                            >
-                              {loc.name}
-                            </a>
-                          ) : (
-                            <span>{loc.name}</span>
-                          )}
+                          <span>{loc.name}</span>
                         </li>
                       ))}
                     </ul>

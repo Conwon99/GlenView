@@ -1,6 +1,4 @@
 import type { APIRoute } from "astro";
-import { locationSlugs } from "../data/locations";
-import { LOCATION_SERVICE_PAGES } from "../data/locationServicePages";
 import { SITE_URL } from "../constants/site";
 
 const siteUrl = SITE_URL;
@@ -22,26 +20,12 @@ const staticPages: string[] = [
   "softwashing",
 ];
 
-function buildLocationPaths(): string[] {
-  const paths: string[] = ["locations"];
-  for (const loc of locationSlugs) {
-    paths.push(loc);
-    for (const svc of LOCATION_SERVICE_PAGES[loc] ?? []) {
-      paths.push(`${loc}/${svc}`);
-    }
-  }
-  return paths;
-}
-
-const locationPaths = buildLocationPaths();
-const allPaths = [...staticPages, ...locationPaths];
+const allPaths = [...staticPages];
 
 function getPriority(path: string): string {
   if (path === "") return "1.0";
   const main = ["about", "services", "contact", "gallery"];
   if (main.includes(path)) return "0.9";
-  if (path === "locations" || locationSlugs.includes(path)) return "0.85";
-  if (locationPaths.includes(path) && path.includes("/")) return "0.8"; // location-service
   if (
     [
       "roof-steam-cleaning",
@@ -58,7 +42,6 @@ function getPriority(path: string): string {
 
 function getChangefreq(path: string): string {
   if (path === "" || path === "gallery") return "weekly";
-  if (locationSlugs.includes(path) || locationPaths.includes(path)) return "weekly";
   return "monthly";
 }
 
