@@ -1,0 +1,359 @@
+url,type,clicks,impressions,avg_position,action
+/,core,15,979,42.1,KEEP
+/about/,core,0,41,47.4,KEEP
+/contact/,core,1,151,66.7,KEEP
+/gallery/,core,0,7,32.7,KEEP
+/services/,core,0,1121,77.8,KEEP
+/softwashing/,core,0,24,69.3,KEEP
+/locations/,core,0,771,68.3,KEEP
+/packages/,core,0,0,0,KEEP
+/roof-steam-cleaning/,core,0,106,56.6,KEEP
+/render-softwashing/,core,2,3106,72.2,KEEP
+/driveway-cleaning/,core,0,1858,60.9,KEEP
+/gutter-cleaning/,core,0,1020,59.1,KEEP
+/pvc-white-cleaning/,core,1,36,37.3,KEEP
+/window-cleaning/,core,1,869,57.1,KEEP
+/moss-removal/,core,0,11,33.5,KEEP
+/patio-cleaning/,core,0,310,60.5,KEEP
+/bishopbriggs/,town-hub,2,2626,47.9,KEEP
+/bishopbriggs/roof-steam-cleaning/,town+service,0,4,9.2,REMOVE -> 301 to /bishopbriggs/
+/bishopbriggs/render-softwashing/,town+service,0,71,49.0,REMOVE -> 301 to /bishopbriggs/
+/bishopbriggs/driveway-cleaning/,town+service,1,84,42.3,KEEP
+/bishopbriggs/gutter-cleaning/,town+service,0,9,60.8,REMOVE -> 301 to /bishopbriggs/
+/bishopbriggs/pvc-white-cleaning/,town+service,0,3,8.3,REMOVE -> 301 to /bishopbriggs/
+/bishopbriggs/window-cleaning/,town+service,5,137,16.1,KEEP
+/bishopbriggs/moss-removal/,town+service,0,4,33.2,REMOVE -> 301 to /bishopbriggs/
+/bishopbriggs/patio-cleaning/,town+service,0,12,31.2,REMOVE -> 301 to /bishopbriggs/
+/robroyston/,town-hub,5,1489,42.9,KEEP
+/robroyston/roof-steam-cleaning/,town+service,0,4,6.5,REMOVE -> 301 to /robroyston/
+/robroyston/render-softwashing/,town+service,0,76,65.0,REMOVE -> 301 to /robroyston/
+/robroyston/driveway-cleaning/,town+service,0,71,44.7,REMOVE -> 301 to /robroyston/
+/robroyston/gutter-cleaning/,town+service,0,13,8.1,REMOVE -> 301 to /robroyston/
+/robroyston/pvc-white-cleaning/,town+service,0,15,16.7,REMOVE -> 301 to /robroyston/
+/robroyston/window-cleaning/,town+service,2,15,3.4,KEEP
+/robroyston/moss-removal/,town+service,0,12,80.2,REMOVE -> 301 to /robroyston/
+/robroyston/patio-cleaning/,town+service,0,68,55.7,REMOVE -> 301 to /robroyston/
+/stepps/,town-hub,0,840,42.7,"REVIEW (0 clicks, hub)"
+/stepps/roof-steam-cleaning/,town+service,0,6,50.0,REMOVE -> 301 to /stepps/
+/stepps/render-softwashing/,town+service,1,9,29.2,KEEP
+/stepps/driveway-cleaning/,town+service,0,12,15.2,REMOVE -> 301 to /stepps/
+/stepps/gutter-cleaning/,town+service,1,12,34.9,KEEP
+/stepps/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /stepps/
+/stepps/window-cleaning/,town+service,2,33,12.2,KEEP
+/stepps/moss-removal/,town+service,0,6,46.0,REMOVE -> 301 to /stepps/
+/stepps/patio-cleaning/,town+service,0,30,49.7,REMOVE -> 301 to /stepps/
+/lenzie/,town-hub,0,751,50.0,"REVIEW (0 clicks, hub)"
+/lenzie/roof-steam-cleaning/,town+service,0,13,13.3,REMOVE -> 301 to /lenzie/
+/lenzie/render-softwashing/,town+service,0,84,55.2,REMOVE -> 301 to /lenzie/
+/lenzie/driveway-cleaning/,town+service,0,72,33.8,REMOVE -> 301 to /lenzie/
+/lenzie/gutter-cleaning/,town+service,0,18,13.8,REMOVE -> 301 to /lenzie/
+/lenzie/pvc-white-cleaning/,town+service,0,1,5.0,REMOVE -> 301 to /lenzie/
+/lenzie/window-cleaning/,town+service,0,28,7.9,REMOVE -> 301 to /lenzie/
+/lenzie/moss-removal/,town+service,0,2,49.5,REMOVE -> 301 to /lenzie/
+/lenzie/patio-cleaning/,town+service,1,2,5.5,KEEP
+/kirkintilloch/,town-hub,4,2174,44.1,KEEP
+/kirkintilloch/roof-steam-cleaning/,town+service,0,0,0,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/render-softwashing/,town+service,0,22,68.9,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/driveway-cleaning/,town+service,0,2,78.0,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/gutter-cleaning/,town+service,0,20,51.4,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/pvc-white-cleaning/,town+service,0,1,2.0,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/window-cleaning/,town+service,1,121,32.5,KEEP
+/kirkintilloch/moss-removal/,town+service,0,5,58.0,REMOVE -> 301 to /kirkintilloch/
+/kirkintilloch/patio-cleaning/,town+service,0,14,57.2,REMOVE -> 301 to /kirkintilloch/
+/auchinloch/,town-hub,0,893,48.0,"REVIEW (0 clicks, hub)"
+/auchinloch/roof-steam-cleaning/,town+service,0,2,3.0,REMOVE -> 301 to /auchinloch/
+/auchinloch/render-softwashing/,town+service,0,57,40.9,REMOVE -> 301 to /auchinloch/
+/auchinloch/driveway-cleaning/,town+service,0,49,24.4,REMOVE -> 301 to /auchinloch/
+/auchinloch/gutter-cleaning/,town+service,0,9,13.3,REMOVE -> 301 to /auchinloch/
+/auchinloch/pvc-white-cleaning/,town+service,0,1,9.0,REMOVE -> 301 to /auchinloch/
+/auchinloch/window-cleaning/,town+service,0,5,18.6,REMOVE -> 301 to /auchinloch/
+/auchinloch/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /auchinloch/
+/auchinloch/patio-cleaning/,town+service,0,19,34.0,REMOVE -> 301 to /auchinloch/
+/chryston/,town-hub,2,1782,47.6,KEEP
+/chryston/roof-steam-cleaning/,town+service,0,9,22.1,REMOVE -> 301 to /chryston/
+/chryston/render-softwashing/,town+service,0,41,55.8,REMOVE -> 301 to /chryston/
+/chryston/driveway-cleaning/,town+service,0,64,32.9,REMOVE -> 301 to /chryston/
+/chryston/gutter-cleaning/,town+service,0,6,44.0,REMOVE -> 301 to /chryston/
+/chryston/pvc-white-cleaning/,town+service,0,70,50.3,REMOVE -> 301 to /chryston/
+/chryston/window-cleaning/,town+service,0,143,35.7,REMOVE -> 301 to /chryston/
+/chryston/moss-removal/,town+service,0,7,40.1,REMOVE -> 301 to /chryston/
+/chryston/patio-cleaning/,town+service,0,65,39.6,REMOVE -> 301 to /chryston/
+/moodiesburn/,town-hub,1,818,45.7,KEEP
+/moodiesburn/roof-steam-cleaning/,town+service,0,1,10.0,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/render-softwashing/,town+service,0,38,38.8,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/driveway-cleaning/,town+service,0,42,30.2,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/gutter-cleaning/,town+service,0,13,23.7,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/pvc-white-cleaning/,town+service,0,1,4.0,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/window-cleaning/,town+service,3,20,8.7,KEEP
+/moodiesburn/moss-removal/,town+service,0,22,51.1,REMOVE -> 301 to /moodiesburn/
+/moodiesburn/patio-cleaning/,town+service,1,11,22.6,KEEP
+/muirhead/,town-hub,1,813,58.6,KEEP
+/muirhead/roof-steam-cleaning/,town+service,0,3,12.7,REMOVE -> 301 to /muirhead/
+/muirhead/render-softwashing/,town+service,0,72,71.1,REMOVE -> 301 to /muirhead/
+/muirhead/driveway-cleaning/,town+service,1,23,49.6,KEEP
+/muirhead/gutter-cleaning/,town+service,0,5,5.8,REMOVE -> 301 to /muirhead/
+/muirhead/pvc-white-cleaning/,town+service,0,3,2.3,REMOVE -> 301 to /muirhead/
+/muirhead/window-cleaning/,town+service,0,16,43.9,REMOVE -> 301 to /muirhead/
+/muirhead/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /muirhead/
+/muirhead/patio-cleaning/,town+service,0,20,59.4,REMOVE -> 301 to /muirhead/
+/gartcosh/,town-hub,3,2074,52.0,KEEP
+/gartcosh/roof-steam-cleaning/,town+service,0,11,14.3,REMOVE -> 301 to /gartcosh/
+/gartcosh/render-softwashing/,town+service,0,25,45.0,REMOVE -> 301 to /gartcosh/
+/gartcosh/driveway-cleaning/,town+service,0,37,32.7,REMOVE -> 301 to /gartcosh/
+/gartcosh/gutter-cleaning/,town+service,0,100,58.4,REMOVE -> 301 to /gartcosh/
+/gartcosh/pvc-white-cleaning/,town+service,0,4,12.2,REMOVE -> 301 to /gartcosh/
+/gartcosh/window-cleaning/,town+service,3,21,5.9,KEEP
+/gartcosh/moss-removal/,town+service,0,2,46.5,REMOVE -> 301 to /gartcosh/
+/gartcosh/patio-cleaning/,town+service,0,39,50.2,REMOVE -> 301 to /gartcosh/
+/cumbernauld/,town-hub,2,2014,45.5,KEEP
+/cumbernauld/roof-steam-cleaning/,town+service,0,14,13.1,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/render-softwashing/,town+service,0,43,52.9,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/driveway-cleaning/,town+service,0,22,61.3,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/gutter-cleaning/,town+service,0,22,42.8,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/pvc-white-cleaning/,town+service,0,2,1.0,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/window-cleaning/,town+service,0,11,22.9,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/moss-removal/,town+service,0,5,8.2,REMOVE -> 301 to /cumbernauld/
+/cumbernauld/patio-cleaning/,town+service,0,6,52.5,REMOVE -> 301 to /cumbernauld/
+/croy/,town-hub,0,395,60.2,"REVIEW (0 clicks, hub)"
+/croy/roof-steam-cleaning/,town+service,0,4,2.2,REMOVE -> 301 to /croy/
+/croy/render-softwashing/,town+service,0,13,58.3,REMOVE -> 301 to /croy/
+/croy/driveway-cleaning/,town+service,0,4,34.8,REMOVE -> 301 to /croy/
+/croy/gutter-cleaning/,town+service,0,1,3.0,REMOVE -> 301 to /croy/
+/croy/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /croy/
+/croy/window-cleaning/,town+service,0,11,12.4,REMOVE -> 301 to /croy/
+/croy/moss-removal/,town+service,0,6,63.3,REMOVE -> 301 to /croy/
+/croy/patio-cleaning/,town+service,0,24,30.2,REMOVE -> 301 to /croy/
+/dullatur/,town-hub,0,365,76.2,"REVIEW (0 clicks, hub)"
+/dullatur/roof-steam-cleaning/,town+service,0,3,8.3,REMOVE -> 301 to /dullatur/
+/dullatur/render-softwashing/,town+service,0,3,26.3,REMOVE -> 301 to /dullatur/
+/dullatur/driveway-cleaning/,town+service,0,1,1.0,REMOVE -> 301 to /dullatur/
+/dullatur/gutter-cleaning/,town+service,0,2,1.5,REMOVE -> 301 to /dullatur/
+/dullatur/pvc-white-cleaning/,town+service,0,3,4.3,REMOVE -> 301 to /dullatur/
+/dullatur/window-cleaning/,town+service,0,4,16.8,REMOVE -> 301 to /dullatur/
+/dullatur/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /dullatur/
+/dullatur/patio-cleaning/,town+service,0,2,3.5,REMOVE -> 301 to /dullatur/
+/twechar/,town-hub,2,515,37.1,KEEP
+/twechar/roof-steam-cleaning/,town+service,0,1,27.0,REMOVE -> 301 to /twechar/
+/twechar/render-softwashing/,town+service,0,8,34.1,REMOVE -> 301 to /twechar/
+/twechar/driveway-cleaning/,town+service,0,2,3.5,REMOVE -> 301 to /twechar/
+/twechar/gutter-cleaning/,town+service,1,7,4.9,KEEP
+/twechar/pvc-white-cleaning/,town+service,0,3,1.3,REMOVE -> 301 to /twechar/
+/twechar/window-cleaning/,town+service,0,7,7.1,REMOVE -> 301 to /twechar/
+/twechar/moss-removal/,town+service,0,22,52.5,REMOVE -> 301 to /twechar/
+/twechar/patio-cleaning/,town+service,0,66,24.0,REMOVE -> 301 to /twechar/
+/kilsyth/,town-hub,2,880,44.5,KEEP
+/kilsyth/roof-steam-cleaning/,town+service,1,6,6.5,KEEP
+/kilsyth/render-softwashing/,town+service,0,68,56.2,REMOVE -> 301 to /kilsyth/
+/kilsyth/driveway-cleaning/,town+service,0,24,58.2,REMOVE -> 301 to /kilsyth/
+/kilsyth/gutter-cleaning/,town+service,0,19,34.0,REMOVE -> 301 to /kilsyth/
+/kilsyth/pvc-white-cleaning/,town+service,0,4,4.8,REMOVE -> 301 to /kilsyth/
+/kilsyth/window-cleaning/,town+service,1,188,46.1,KEEP
+/kilsyth/moss-removal/,town+service,1,4,28.2,KEEP
+/kilsyth/patio-cleaning/,town+service,1,46,40.5,KEEP
+/banton/,town-hub,0,619,64.7,"REVIEW (0 clicks, hub)"
+/banton/roof-steam-cleaning/,town+service,0,2,3.5,REMOVE -> 301 to /banton/
+/banton/render-softwashing/,town+service,0,28,48.4,REMOVE -> 301 to /banton/
+/banton/driveway-cleaning/,town+service,0,67,68.8,REMOVE -> 301 to /banton/
+/banton/gutter-cleaning/,town+service,0,3,1.3,REMOVE -> 301 to /banton/
+/banton/pvc-white-cleaning/,town+service,0,3,27.7,REMOVE -> 301 to /banton/
+/banton/window-cleaning/,town+service,0,2,1.0,REMOVE -> 301 to /banton/
+/banton/moss-removal/,town+service,0,7,55.0,REMOVE -> 301 to /banton/
+/banton/patio-cleaning/,town+service,0,82,48.9,REMOVE -> 301 to /banton/
+/queenzieburn/,town-hub,0,562,43.3,"REVIEW (0 clicks, hub)"
+/queenzieburn/roof-steam-cleaning/,town+service,0,0,0,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/render-softwashing/,town+service,0,36,33.0,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/driveway-cleaning/,town+service,0,38,34.3,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/gutter-cleaning/,town+service,0,7,8.3,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/window-cleaning/,town+service,0,5,4.4,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/moss-removal/,town+service,0,30,38.3,REMOVE -> 301 to /queenzieburn/
+/queenzieburn/patio-cleaning/,town+service,0,11,10.6,REMOVE -> 301 to /queenzieburn/
+/coatbridge/,town-hub,0,3206,48.9,"REVIEW (0 clicks, hub)"
+/coatbridge/roof-steam-cleaning/,town+service,0,2,2.5,REMOVE -> 301 to /coatbridge/
+/coatbridge/render-softwashing/,town+service,0,41,35.0,REMOVE -> 301 to /coatbridge/
+/coatbridge/driveway-cleaning/,town+service,0,75,50.0,REMOVE -> 301 to /coatbridge/
+/coatbridge/gutter-cleaning/,town+service,0,18,46.2,REMOVE -> 301 to /coatbridge/
+/coatbridge/pvc-white-cleaning/,town+service,0,6,47.0,REMOVE -> 301 to /coatbridge/
+/coatbridge/window-cleaning/,town+service,0,26,44.6,REMOVE -> 301 to /coatbridge/
+/coatbridge/moss-removal/,town+service,0,3,34.0,REMOVE -> 301 to /coatbridge/
+/coatbridge/patio-cleaning/,town+service,0,86,50.3,REMOVE -> 301 to /coatbridge/
+/airdrie/,town-hub,1,2358,44.4,KEEP
+/airdrie/roof-steam-cleaning/,town+service,0,4,17.8,REMOVE -> 301 to /airdrie/
+/airdrie/render-softwashing/,town+service,0,3,1.3,REMOVE -> 301 to /airdrie/
+/airdrie/driveway-cleaning/,town+service,0,14,35.3,REMOVE -> 301 to /airdrie/
+/airdrie/gutter-cleaning/,town+service,0,9,24.6,REMOVE -> 301 to /airdrie/
+/airdrie/pvc-white-cleaning/,town+service,0,4,2.8,REMOVE -> 301 to /airdrie/
+/airdrie/window-cleaning/,town+service,0,3,3.3,REMOVE -> 301 to /airdrie/
+/airdrie/moss-removal/,town+service,0,3,33.3,REMOVE -> 301 to /airdrie/
+/airdrie/patio-cleaning/,town+service,0,15,31.8,REMOVE -> 301 to /airdrie/
+/glenboig/,town-hub,1,800,36.5,KEEP
+/glenboig/roof-steam-cleaning/,town+service,0,15,8.5,REMOVE -> 301 to /glenboig/
+/glenboig/render-softwashing/,town+service,0,41,63.8,REMOVE -> 301 to /glenboig/
+/glenboig/driveway-cleaning/,town+service,0,43,24.5,REMOVE -> 301 to /glenboig/
+/glenboig/gutter-cleaning/,town+service,0,13,12.3,REMOVE -> 301 to /glenboig/
+/glenboig/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /glenboig/
+/glenboig/window-cleaning/,town+service,0,10,9.1,REMOVE -> 301 to /glenboig/
+/glenboig/moss-removal/,town+service,0,19,49.0,REMOVE -> 301 to /glenboig/
+/glenboig/patio-cleaning/,town+service,0,78,34.1,REMOVE -> 301 to /glenboig/
+/plains/,town-hub,1,647,69.5,KEEP
+/plains/roof-steam-cleaning/,town+service,0,0,0,REMOVE -> 301 to /plains/
+/plains/render-softwashing/,town+service,0,59,55.5,REMOVE -> 301 to /plains/
+/plains/driveway-cleaning/,town+service,0,7,43.3,REMOVE -> 301 to /plains/
+/plains/gutter-cleaning/,town+service,0,3,3.7,REMOVE -> 301 to /plains/
+/plains/pvc-white-cleaning/,town+service,0,7,2.4,REMOVE -> 301 to /plains/
+/plains/window-cleaning/,town+service,0,2,2.0,REMOVE -> 301 to /plains/
+/plains/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /plains/
+/plains/patio-cleaning/,town+service,0,3,65.7,REMOVE -> 301 to /plains/
+/caldercruix/,town-hub,0,767,44.0,"REVIEW (0 clicks, hub)"
+/caldercruix/roof-steam-cleaning/,town+service,0,8,18.8,REMOVE -> 301 to /caldercruix/
+/caldercruix/render-softwashing/,town+service,0,9,48.7,REMOVE -> 301 to /caldercruix/
+/caldercruix/driveway-cleaning/,town+service,0,12,68.2,REMOVE -> 301 to /caldercruix/
+/caldercruix/gutter-cleaning/,town+service,0,12,18.3,REMOVE -> 301 to /caldercruix/
+/caldercruix/pvc-white-cleaning/,town+service,0,7,48.3,REMOVE -> 301 to /caldercruix/
+/caldercruix/window-cleaning/,town+service,3,29,5.3,KEEP
+/caldercruix/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /caldercruix/
+/caldercruix/patio-cleaning/,town+service,0,5,72.8,REMOVE -> 301 to /caldercruix/
+/chapelhall/,town-hub,2,1773,55.6,KEEP
+/chapelhall/roof-steam-cleaning/,town+service,0,7,14.9,REMOVE -> 301 to /chapelhall/
+/chapelhall/render-softwashing/,town+service,0,20,60.4,REMOVE -> 301 to /chapelhall/
+/chapelhall/driveway-cleaning/,town+service,0,13,12.4,REMOVE -> 301 to /chapelhall/
+/chapelhall/gutter-cleaning/,town+service,0,12,11.1,REMOVE -> 301 to /chapelhall/
+/chapelhall/pvc-white-cleaning/,town+service,0,39,40.1,REMOVE -> 301 to /chapelhall/
+/chapelhall/window-cleaning/,town+service,0,14,24.8,REMOVE -> 301 to /chapelhall/
+/chapelhall/moss-removal/,town+service,0,9,45.8,REMOVE -> 301 to /chapelhall/
+/chapelhall/patio-cleaning/,town+service,0,30,80.0,REMOVE -> 301 to /chapelhall/
+/salsburgh/,town-hub,0,873,55.2,"REVIEW (0 clicks, hub)"
+/salsburgh/roof-steam-cleaning/,town+service,0,7,1.9,REMOVE -> 301 to /salsburgh/
+/salsburgh/render-softwashing/,town+service,0,7,18.6,REMOVE -> 301 to /salsburgh/
+/salsburgh/driveway-cleaning/,town+service,0,5,3.6,REMOVE -> 301 to /salsburgh/
+/salsburgh/gutter-cleaning/,town+service,0,2,28.5,REMOVE -> 301 to /salsburgh/
+/salsburgh/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /salsburgh/
+/salsburgh/window-cleaning/,town+service,0,3,6.7,REMOVE -> 301 to /salsburgh/
+/salsburgh/moss-removal/,town+service,0,2,49.0,REMOVE -> 301 to /salsburgh/
+/salsburgh/patio-cleaning/,town+service,0,6,28.8,REMOVE -> 301 to /salsburgh/
+/denny/,town-hub,0,781,38.9,"REVIEW (0 clicks, hub)"
+/denny/roof-steam-cleaning/,town+service,0,12,12.4,REMOVE -> 301 to /denny/
+/denny/render-softwashing/,town+service,0,26,61.2,REMOVE -> 301 to /denny/
+/denny/driveway-cleaning/,town+service,0,25,7.0,REMOVE -> 301 to /denny/
+/denny/gutter-cleaning/,town+service,0,14,14.0,REMOVE -> 301 to /denny/
+/denny/pvc-white-cleaning/,town+service,0,3,5.0,REMOVE -> 301 to /denny/
+/denny/window-cleaning/,town+service,0,6,33.5,REMOVE -> 301 to /denny/
+/denny/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /denny/
+/denny/patio-cleaning/,town+service,0,3,3.3,REMOVE -> 301 to /denny/
+/bonnybridge/,town-hub,1,836,57.9,KEEP
+/bonnybridge/roof-steam-cleaning/,town+service,0,5,15.4,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/render-softwashing/,town+service,0,9,61.2,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/driveway-cleaning/,town+service,1,52,11.8,KEEP
+/bonnybridge/gutter-cleaning/,town+service,0,27,31.4,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/pvc-white-cleaning/,town+service,0,5,43.4,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/window-cleaning/,town+service,0,14,16.3,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /bonnybridge/
+/bonnybridge/patio-cleaning/,town+service,0,24,82.1,REMOVE -> 301 to /bonnybridge/
+/banknock/,town-hub,1,703,66.2,KEEP
+/banknock/roof-steam-cleaning/,town+service,0,0,0,REMOVE -> 301 to /banknock/
+/banknock/render-softwashing/,town+service,0,3,27.0,REMOVE -> 301 to /banknock/
+/banknock/driveway-cleaning/,town+service,0,10,78.2,REMOVE -> 301 to /banknock/
+/banknock/gutter-cleaning/,town+service,0,3,2.3,REMOVE -> 301 to /banknock/
+/banknock/pvc-white-cleaning/,town+service,0,1,9.0,REMOVE -> 301 to /banknock/
+/banknock/window-cleaning/,town+service,1,8,5.6,KEEP
+/banknock/moss-removal/,town+service,0,7,64.7,REMOVE -> 301 to /banknock/
+/banknock/patio-cleaning/,town+service,0,27,82.3,REMOVE -> 301 to /banknock/
+/haggs/,town-hub,0,355,68.1,"REVIEW (0 clicks, hub)"
+/haggs/roof-steam-cleaning/,town+service,0,17,4.5,REMOVE -> 301 to /haggs/
+/haggs/render-softwashing/,town+service,0,9,47.0,REMOVE -> 301 to /haggs/
+/haggs/driveway-cleaning/,town+service,0,0,0,REMOVE -> 301 to /haggs/
+/haggs/gutter-cleaning/,town+service,0,1,1.0,REMOVE -> 301 to /haggs/
+/haggs/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /haggs/
+/haggs/window-cleaning/,town+service,0,0,0,REMOVE -> 301 to /haggs/
+/haggs/moss-removal/,town+service,0,3,63.3,REMOVE -> 301 to /haggs/
+/haggs/patio-cleaning/,town+service,0,1,1.0,REMOVE -> 301 to /haggs/
+/falkirk/,town-hub,0,2295,41.8,"REVIEW (0 clicks, hub)"
+/falkirk/roof-steam-cleaning/,town+service,1,25,24.4,KEEP
+/falkirk/render-softwashing/,town+service,1,40,30.9,KEEP
+/falkirk/driveway-cleaning/,town+service,0,40,20.3,REMOVE -> 301 to /falkirk/
+/falkirk/gutter-cleaning/,town+service,0,8,13.4,REMOVE -> 301 to /falkirk/
+/falkirk/pvc-white-cleaning/,town+service,0,9,5.7,REMOVE -> 301 to /falkirk/
+/falkirk/window-cleaning/,town+service,0,16,42.9,REMOVE -> 301 to /falkirk/
+/falkirk/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /falkirk/
+/falkirk/patio-cleaning/,town+service,0,21,21.1,REMOVE -> 301 to /falkirk/
+/camelon/,town-hub,0,317,73.6,"REVIEW (0 clicks, hub)"
+/camelon/roof-steam-cleaning/,town+service,0,5,5.8,REMOVE -> 301 to /camelon/
+/camelon/render-softwashing/,town+service,0,5,70.6,REMOVE -> 301 to /camelon/
+/camelon/driveway-cleaning/,town+service,0,2,1.5,REMOVE -> 301 to /camelon/
+/camelon/gutter-cleaning/,town+service,0,3,4.0,REMOVE -> 301 to /camelon/
+/camelon/pvc-white-cleaning/,town+service,0,6,19.2,REMOVE -> 301 to /camelon/
+/camelon/window-cleaning/,town+service,1,11,5.7,KEEP
+/camelon/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /camelon/
+/camelon/patio-cleaning/,town+service,0,6,61.2,REMOVE -> 301 to /camelon/
+/larbert/,town-hub,0,773,56.8,"REVIEW (0 clicks, hub)"
+/larbert/roof-steam-cleaning/,town+service,1,14,39.6,KEEP
+/larbert/render-softwashing/,town+service,0,7,7.0,REMOVE -> 301 to /larbert/
+/larbert/driveway-cleaning/,town+service,0,58,19.6,REMOVE -> 301 to /larbert/
+/larbert/gutter-cleaning/,town+service,0,10,10.3,REMOVE -> 301 to /larbert/
+/larbert/pvc-white-cleaning/,town+service,0,2,26.0,REMOVE -> 301 to /larbert/
+/larbert/window-cleaning/,town+service,0,5,45.6,REMOVE -> 301 to /larbert/
+/larbert/moss-removal/,town+service,0,1,5.0,REMOVE -> 301 to /larbert/
+/larbert/patio-cleaning/,town+service,0,65,29.2,REMOVE -> 301 to /larbert/
+/stenhousemuir/,town-hub,0,275,64.3,"REVIEW (0 clicks, hub)"
+/stenhousemuir/roof-steam-cleaning/,town+service,0,11,39.7,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/render-softwashing/,town+service,0,10,44.6,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/driveway-cleaning/,town+service,0,1,5.0,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/gutter-cleaning/,town+service,0,11,7.3,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/pvc-white-cleaning/,town+service,0,2,2.5,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/window-cleaning/,town+service,0,11,12.7,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /stenhousemuir/
+/stenhousemuir/patio-cleaning/,town+service,0,2,47.5,REMOVE -> 301 to /stenhousemuir/
+/grangemouth/,town-hub,2,1211,44.0,KEEP
+/grangemouth/roof-steam-cleaning/,town+service,0,9,11.8,REMOVE -> 301 to /grangemouth/
+/grangemouth/render-softwashing/,town+service,0,3,6.0,REMOVE -> 301 to /grangemouth/
+/grangemouth/driveway-cleaning/,town+service,0,0,0,REMOVE -> 301 to /grangemouth/
+/grangemouth/gutter-cleaning/,town+service,1,18,43.2,KEEP
+/grangemouth/pvc-white-cleaning/,town+service,0,0,0,REMOVE -> 301 to /grangemouth/
+/grangemouth/window-cleaning/,town+service,0,15,17.5,REMOVE -> 301 to /grangemouth/
+/grangemouth/moss-removal/,town+service,0,1,1.0,REMOVE -> 301 to /grangemouth/
+/grangemouth/patio-cleaning/,town+service,0,7,66.4,REMOVE -> 301 to /grangemouth/
+/polmont/,town-hub,0,1094,58.5,"REVIEW (0 clicks, hub)"
+/polmont/roof-steam-cleaning/,town+service,0,16,61.4,REMOVE -> 301 to /polmont/
+/polmont/render-softwashing/,town+service,0,18,72.2,REMOVE -> 301 to /polmont/
+/polmont/driveway-cleaning/,town+service,0,30,28.2,REMOVE -> 301 to /polmont/
+/polmont/gutter-cleaning/,town+service,0,21,20.1,REMOVE -> 301 to /polmont/
+/polmont/pvc-white-cleaning/,town+service,0,1,83.0,REMOVE -> 301 to /polmont/
+/polmont/window-cleaning/,town+service,0,15,30.7,REMOVE -> 301 to /polmont/
+/polmont/moss-removal/,town+service,0,7,57.9,REMOVE -> 301 to /polmont/
+/polmont/patio-cleaning/,town+service,0,21,79.6,REMOVE -> 301 to /polmont/
+/linlithgow/,town-hub,1,475,37.6,KEEP
+/linlithgow/roof-steam-cleaning/,town+service,0,0,0,REMOVE -> 301 to /linlithgow/
+/linlithgow/render-softwashing/,town+service,0,9,47.1,REMOVE -> 301 to /linlithgow/
+/linlithgow/driveway-cleaning/,town+service,0,8,11.4,REMOVE -> 301 to /linlithgow/
+/linlithgow/gutter-cleaning/,town+service,0,3,17.0,REMOVE -> 301 to /linlithgow/
+/linlithgow/pvc-white-cleaning/,town+service,0,7,3.7,REMOVE -> 301 to /linlithgow/
+/linlithgow/window-cleaning/,town+service,0,6,10.7,REMOVE -> 301 to /linlithgow/
+/linlithgow/moss-removal/,town+service,0,3,6.3,REMOVE -> 301 to /linlithgow/
+/linlithgow/patio-cleaning/,town+service,0,0,0,REMOVE -> 301 to /linlithgow/
+/stirling/,town-hub,4,1494,45.2,KEEP
+/stirling/roof-steam-cleaning/,town+service,0,11,24.8,REMOVE -> 301 to /stirling/
+/stirling/render-softwashing/,town+service,0,48,19.1,REMOVE -> 301 to /stirling/
+/stirling/driveway-cleaning/,town+service,1,17,29.4,KEEP
+/stirling/gutter-cleaning/,town+service,0,11,56.3,REMOVE -> 301 to /stirling/
+/stirling/pvc-white-cleaning/,town+service,0,7,5.1,REMOVE -> 301 to /stirling/
+/stirling/window-cleaning/,town+service,0,9,24.3,REMOVE -> 301 to /stirling/
+/stirling/moss-removal/,town+service,1,3,4.3,KEEP
+/stirling/patio-cleaning/,town+service,0,34,52.1,REMOVE -> 301 to /stirling/
+/bridge-of-allan/,town-hub,0,710,60.7,"REVIEW (0 clicks, hub)"
+/bridge-of-allan/roof-steam-cleaning/,town+service,0,9,12.3,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/render-softwashing/,town+service,0,40,50.1,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/driveway-cleaning/,town+service,0,20,19.6,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/gutter-cleaning/,town+service,1,5,8.2,KEEP
+/bridge-of-allan/pvc-white-cleaning/,town+service,0,3,55.3,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/window-cleaning/,town+service,0,8,19.2,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/moss-removal/,town+service,0,1,3.0,REMOVE -> 301 to /bridge-of-allan/
+/bridge-of-allan/patio-cleaning/,town+service,0,9,58.8,REMOVE -> 301 to /bridge-of-allan/
+/dunblane/,town-hub,1,654,54.3,KEEP
+/dunblane/roof-steam-cleaning/,town+service,1,6,21.8,KEEP
+/dunblane/render-softwashing/,town+service,0,10,50.0,REMOVE -> 301 to /dunblane/
+/dunblane/driveway-cleaning/,town+service,0,36,53.6,REMOVE -> 301 to /dunblane/
+/dunblane/gutter-cleaning/,town+service,0,6,7.0,REMOVE -> 301 to /dunblane/
+/dunblane/pvc-white-cleaning/,town+service,1,4,42.2,KEEP
+/dunblane/window-cleaning/,town+service,0,12,18.5,REMOVE -> 301 to /dunblane/
+/dunblane/moss-removal/,town+service,0,2,5.0,REMOVE -> 301 to /dunblane/
+/dunblane/patio-cleaning/,town+service,0,8,57.5,REMOVE -> 301 to /dunblane/

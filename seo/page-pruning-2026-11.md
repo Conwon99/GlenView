@@ -1,0 +1,104 @@
+# Page pruning for spam-update compliance (Nov 2026)
+
+Source: Google Search Console Performance export, last 16 months (to 2026-11-01), web search.
+Full per-URL list: `seo/page-pruning-2026-11.csv`.
+
+## The risk
+
+The site generates **358 URLs**, of which **320 are town × service pages**
+(`/[location]/[service]/`: 40 towns × 8 services). Each one uses the same template
+with the town name swapped in. Google's spam policies call this **scaled content
+abuse / doorway pages**, and it is the pattern most likely to get the whole site
+demoted, not just those pages.
+
+## Summary
+
+| Group | Pages | Clicks (16 mo) | Impressions | Action |
+|---|---:|---:|---:|---|
+| Town+service pages with 0 clicks | **274** | 0 | 4,357 | **Remove** (301 → town hub) |
+| Town hubs with 0 clicks | 18 | 0 | 15,871 | Review: merge or rewrite |
+| Everything else | 66 | 101 | 37,517 | Keep |
+
+The 274 removals have brought in **zero clicks** in 16 months and only 1.6 impressions
+per page per month on average. 17 of them have never appeared in search at all.
+
+## 1. Remove: 274 town+service pages with 0 clicks
+
+Every `/[town]/[service]/` URL **except** the 30 listed below. Filter the CSV on
+`action` starting with `REMOVE`.
+
+**Keep these 30 town+service pages** (each has had at least 1 click):
+
+- bishopbriggs: window-cleaning, driveway-cleaning
+- robroyston: window-cleaning
+- stepps: window-cleaning, gutter-cleaning, render-softwashing
+- lenzie: patio-cleaning
+- kirkintilloch: window-cleaning
+- moodiesburn: window-cleaning, patio-cleaning
+- muirhead: driveway-cleaning
+- gartcosh: window-cleaning
+- twechar: gutter-cleaning
+- kilsyth: window-cleaning, patio-cleaning, roof-steam-cleaning, moss-removal
+- caldercruix: window-cleaning
+- bonnybridge: driveway-cleaning
+- banknock: window-cleaning
+- falkirk: roof-steam-cleaning, render-softwashing
+- camelon: window-cleaning
+- larbert: roof-steam-cleaning
+- grangemouth: gutter-cleaning
+- stirling: driveway-cleaning, moss-removal
+- bridge-of-allan: gutter-cleaning
+- dunblane: roof-steam-cleaning, pvc-white-cleaning
+
+Most of these got only 1 click. Check that each has genuinely unique content
+(real local jobs, photos, specifics). If one is just the template, drop it as well.
+
+**How to remove:** 301-redirect each URL to its town hub (`/[town]/`). That passes on
+any link value and avoids 404s. Then take the URLs out of `getStaticPaths`, the
+sitemap and all internal links (service-area grids, footer, town hub service lists).
+
+## 2. Review: 18 town hubs with 0 clicks
+
+These get real impressions but rank too low for clicks (average position 40–75).
+Two options for each: **merge** it into a nearby hub that gets clicks (301 + mention
+the town on the stronger page), or **rewrite** it with genuinely local content.
+
+| Hub | Impressions | Merge suggestion |
+|---|---:|---|
+| /coatbridge/ | 3,206 | rewrite (high demand) or → /airdrie/ |
+| /falkirk/ | 2,295 | rewrite (high demand; Falkirk combos get clicks) |
+| /polmont/ | 1,094 | → /grangemouth/ or /linlithgow/ |
+| /auchinloch/ | 893 | → /kirkintilloch/ |
+| /salsburgh/ | 873 | → /airdrie/ |
+| /stepps/ | 840 | rewrite (Stepps combos get clicks) |
+| /denny/ | 781 | → /bonnybridge/ |
+| /larbert/ | 773 | → /stirling/ |
+| /caldercruix/ | 767 | → /plains/ or /airdrie/ |
+| /lenzie/ | 751 | → /kirkintilloch/ |
+| /bridge-of-allan/ | 710 | → /stirling/ |
+| /banton/ | 619 | → /kilsyth/ |
+| /queenzieburn/ | 562 | → /kilsyth/ |
+| /croy/ | 395 | → /cumbernauld/ |
+| /dullatur/ | 365 | → /cumbernauld/ |
+| /haggs/ | 355 | → /banknock/ |
+| /camelon/ | 317 | → /falkirk/ |
+| /stenhousemuir/ | 275 | → /stirling/ or /falkirk/ |
+
+## 3. Core pages: keep, but tidy up
+
+- `/packages/` has had no impressions at all. Add noindex or remove it if it isn't used.
+- `/softwashing/` (24 impressions, 0 clicks) overlaps with `/render-softwashing/`. 301 it to `/render-softwashing/`.
+- Keep the 0-click service hubs (`/driveway-cleaning/`, `/gutter-cleaning/`, etc.). They
+  are the natural targets that consolidated content should point to.
+
+## 4. Technical issue found
+
+Google has indexed some **non-trailing-slash duplicates**, e.g.
+`/larbert/patio-cleaning`, `/gutter-cleaning`, `/stepps/driveway-cleaning`. Add a
+Vercel rule to 301 non-slash URLs to the slash version so duplicates stop being indexed.
+
+## After deploying
+
+1. Submit the updated sitemap in Search Console.
+2. Use URL Inspection on a sample of redirected URLs to confirm they return 301.
+3. Re-check Pages and Performance in 4–8 weeks.
